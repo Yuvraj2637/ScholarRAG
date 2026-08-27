@@ -1,0 +1,2851 @@
+{
+  "chunk_summary": {
+    "dense": {
+      "p@1": 0.23333333333333334,
+      "p@3": 0.2111111111111111,
+      "p@5": 0.18666666666666668,
+      "r@1": 0.07777777777777777,
+      "r@3": 0.2111111111111111,
+      "r@5": 0.31111111111111106,
+      "hit@1": 0.23333333333333334,
+      "hit@3": 0.5333333333333333,
+      "hit@5": 0.6333333333333333,
+      "mrr": 0.38055555555555554,
+      "ndcg@5": 0.27217018782278707,
+      "warm_latency_ms": 52.90870333556086,
+      "cold_latency_ms": 29622.2
+    },
+    "bm25": {
+      "p@1": 0.2,
+      "p@3": 0.28888888888888886,
+      "p@5": 0.24666666666666667,
+      "r@1": 0.06666666666666667,
+      "r@3": 0.28888888888888886,
+      "r@5": 0.4111111111111111,
+      "hit@1": 0.2,
+      "hit@3": 0.7,
+      "hit@5": 0.7666666666666667,
+      "mrr": 0.4166666666666667,
+      "ndcg@5": 0.3387161383205479,
+      "warm_latency_ms": 5.1135233060146374,
+      "cold_latency_ms": 7.5
+    },
+    "hybrid": {
+      "p@1": 0.4,
+      "p@3": 0.31111111111111106,
+      "p@5": 0.22666666666666668,
+      "r@1": 0.13333333333333333,
+      "r@3": 0.31111111111111106,
+      "r@5": 0.3777777777777777,
+      "hit@1": 0.4,
+      "hit@3": 0.6,
+      "hit@5": 0.7333333333333333,
+      "mrr": 0.5261111111111111,
+      "ndcg@5": 0.36828759583893067,
+      "warm_latency_ms": 53.9312033331953,
+      "cold_latency_ms": 76.9
+    },
+    "hybrid_rerank": {
+      "p@1": 0.3333333333333333,
+      "p@3": 0.25555555555555554,
+      "p@5": 0.21333333333333335,
+      "r@1": 0.1111111111111111,
+      "r@3": 0.25555555555555554,
+      "r@5": 0.3555555555555555,
+      "hit@1": 0.3333333333333333,
+      "hit@3": 0.6,
+      "hit@5": 0.7333333333333333,
+      "mrr": 0.4744444444444444,
+      "ndcg@5": 0.3296529759226981,
+      "warm_latency_ms": 1472.8053433277335,
+      "cold_latency_ms": 10364.2
+    }
+  },
+  "paper_summary": {
+    "dense": {
+      "p@1": 0.0,
+      "p@3": 0.0,
+      "p@5": 0.0,
+      "r@1": 0.7333333333333333,
+      "r@3": 0.0,
+      "r@5": 0.9,
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "hit@5": 0.0,
+      "mrr": 0.8027777777777777,
+      "ndcg@5": 0.8281152331674481
+    },
+    "bm25": {
+      "p@1": 0.0,
+      "p@3": 0.0,
+      "p@5": 0.0,
+      "r@1": 0.7166666666666667,
+      "r@3": 0.0,
+      "r@5": 0.9,
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "hit@5": 0.0,
+      "mrr": 0.8011111111111112,
+      "ndcg@5": 0.8218952461095654
+    },
+    "hybrid": {
+      "p@1": 0.0,
+      "p@3": 0.0,
+      "p@5": 0.0,
+      "r@1": 0.8166666666666667,
+      "r@3": 0.0,
+      "r@5": 0.9333333333333333,
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "hit@5": 0.0,
+      "mrr": 0.865,
+      "ndcg@5": 0.8775224811405813
+    },
+    "hybrid_rerank": {
+      "p@1": 0.0,
+      "p@3": 0.0,
+      "p@5": 0.0,
+      "r@1": 0.8166666666666667,
+      "r@3": 0.0,
+      "r@5": 0.9,
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "hit@5": 0.0,
+      "mrr": 0.8566666666666667,
+      "ndcg@5": 0.8672594186935333
+    }
+  },
+  "category_summary": {
+    "Comparative": {
+      "dense": {
+        "chunk_r@1": 0.08333333333333333,
+        "chunk_mrr": 0.41666666666666663,
+        "chunk_ndcg@5": 0.2932992037642228,
+        "paper_r@1": 0.75,
+        "paper_mrr": 0.8333333333333334
+      },
+      "bm25": {
+        "chunk_r@1": 0.08333333333333333,
+        "chunk_mrr": 0.3958333333333333,
+        "chunk_ndcg@5": 0.2851661996365151,
+        "paper_r@1": 0.75,
+        "paper_mrr": 0.8333333333333334
+      },
+      "hybrid": {
+        "chunk_r@1": 0.16666666666666666,
+        "chunk_mrr": 0.6458333333333334,
+        "chunk_ndcg@5": 0.46114572189504877,
+        "paper_r@1": 0.75,
+        "paper_mrr": 0.875
+      },
+      "hybrid_rerank": {
+        "chunk_r@1": 0.16666666666666666,
+        "chunk_mrr": 0.625,
+        "chunk_ndcg@5": 0.41784651813082596,
+        "paper_r@1": 1.0,
+        "paper_mrr": 1.0
+      }
+    },
+    "Conceptual": {
+      "dense": {
+        "chunk_r@1": 0.08333333333333333,
+        "chunk_mrr": 0.4375,
+        "chunk_ndcg@5": 0.39643912138461196,
+        "paper_r@1": 0.75,
+        "paper_mrr": 0.8125
+      },
+      "bm25": {
+        "chunk_r@1": 0.08333333333333333,
+        "chunk_mrr": 0.4583333333333333,
+        "chunk_ndcg@5": 0.42507415099174006,
+        "paper_r@1": 0.75,
+        "paper_mrr": 0.875
+      },
+      "hybrid": {
+        "chunk_r@1": 0.08333333333333333,
+        "chunk_mrr": 0.4375,
+        "chunk_ndcg@5": 0.37454731436660316,
+        "paper_r@1": 0.75,
+        "paper_mrr": 0.8
+      },
+      "hybrid_rerank": {
+        "chunk_r@1": 0.08333333333333333,
+        "chunk_mrr": 0.3833333333333333,
+        "chunk_ndcg@5": 0.29538544813433815,
+        "paper_r@1": 0.75,
+        "paper_mrr": 0.8
+      }
+    },
+    "Mechanistic": {
+      "dense": {
+        "chunk_r@1": 0.09523809523809523,
+        "chunk_mrr": 0.44642857142857145,
+        "chunk_ndcg@5": 0.2959001742595171,
+        "paper_r@1": 0.5714285714285714,
+        "paper_mrr": 0.6785714285714286
+      },
+      "bm25": {
+        "chunk_r@1": 0.047619047619047616,
+        "chunk_mrr": 0.40476190476190477,
+        "chunk_ndcg@5": 0.3358738746467242,
+        "paper_r@1": 0.6785714285714286,
+        "paper_mrr": 0.75
+      },
+      "hybrid": {
+        "chunk_r@1": 0.16666666666666666,
+        "chunk_mrr": 0.6035714285714285,
+        "chunk_ndcg@5": 0.40317237015477325,
+        "paper_r@1": 0.75,
+        "paper_mrr": 0.8035714285714286
+      },
+      "hybrid_rerank": {
+        "chunk_r@1": 0.11904761904761904,
+        "chunk_mrr": 0.5142857142857143,
+        "chunk_ndcg@5": 0.33321276686643003,
+        "paper_r@1": 0.6785714285714286,
+        "paper_mrr": 0.75
+      }
+    },
+    "Numerical": {
+      "dense": {
+        "chunk_r@1": 0.0,
+        "chunk_mrr": 0.125,
+        "chunk_ndcg@5": 0.10105367325027378,
+        "paper_r@1": 1.0,
+        "paper_mrr": 1.0
+      },
+      "bm25": {
+        "chunk_r@1": 0.0,
+        "chunk_mrr": 0.16666666666666666,
+        "chunk_ndcg@5": 0.11731968150568911,
+        "paper_r@1": 0.5,
+        "paper_mrr": 0.6
+      },
+      "hybrid": {
+        "chunk_r@1": 0.0,
+        "chunk_mrr": 0.25,
+        "chunk_ndcg@5": 0.1480409554829326,
+        "paper_r@1": 1.0,
+        "paper_mrr": 1.0
+      },
+      "hybrid_rerank": {
+        "chunk_r@1": 0.0,
+        "chunk_mrr": 0.125,
+        "chunk_ndcg@5": 0.10105367325027378,
+        "paper_r@1": 1.0,
+        "paper_mrr": 1.0
+      }
+    },
+    "Terminology": {
+      "dense": {
+        "chunk_r@1": 0.0,
+        "chunk_mrr": 0.0,
+        "chunk_ndcg@5": 0.0,
+        "paper_r@1": 1.0,
+        "paper_mrr": 1.0
+      },
+      "bm25": {
+        "chunk_r@1": 0.0,
+        "chunk_mrr": 0.29166666666666663,
+        "chunk_ndcg@5": 0.2183733547559629,
+        "paper_r@1": 0.5,
+        "paper_mrr": 0.75
+      },
+      "hybrid": {
+        "chunk_r@1": 0.0,
+        "chunk_mrr": 0.25,
+        "chunk_ndcg@5": 0.1480409554829326,
+        "paper_r@1": 1.0,
+        "paper_mrr": 1.0
+      },
+      "hybrid_rerank": {
+        "chunk_r@1": 0.0,
+        "chunk_mrr": 0.25,
+        "chunk_ndcg@5": 0.24909462873320642,
+        "paper_r@1": 1.0,
+        "paper_mrr": 1.0
+      }
+    },
+    "Trade-off": {
+      "dense": {
+        "chunk_r@1": 0.08333333333333333,
+        "chunk_mrr": 0.375,
+        "chunk_ndcg@5": 0.2653606369886217,
+        "paper_r@1": 1.0,
+        "paper_mrr": 1.0
+      },
+      "bm25": {
+        "chunk_r@1": 0.16666666666666666,
+        "chunk_mrr": 0.625,
+        "chunk_ndcg@5": 0.4867256073814936,
+        "paper_r@1": 1.0,
+        "paper_mrr": 1.0
+      },
+      "hybrid": {
+        "chunk_r@1": 0.16666666666666666,
+        "chunk_mrr": 0.5,
+        "chunk_ndcg@5": 0.3673196815056891,
+        "paper_r@1": 1.0,
+        "paper_mrr": 1.0
+      },
+      "hybrid_rerank": {
+        "chunk_r@1": 0.16666666666666666,
+        "chunk_mrr": 0.5625,
+        "chunk_ndcg@5": 0.417846518130826,
+        "paper_r@1": 1.0,
+        "paper_mrr": 1.0
+      }
+    }
+  },
+  "queries": [
+    {
+      "id": "eval_01",
+      "query": "How does FlashAttention prevent the quadratic memory bottleneck of standard attention?",
+      "target_papers": [
+        "flashattention_v1",
+        "flashattention_v2"
+      ],
+      "gold_chunks": [
+        "flashattention_v1_s1_c0",
+        "flashattention_v1_s4_c0",
+        "flashattention_v1_s125_c0"
+      ],
+      "query_type": "Mechanistic",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "flash_attention_3_s0_c0",
+            "flashattention_v1_s1_c0",
+            "flashattention_v1_s53_c0",
+            "flashattention_v2_s54_c2",
+            "flash_attention_3_s25_c1"
+          ],
+          "paper_ids": [
+            "flash_attention_3",
+            "flashattention_v1",
+            "flashattention_v1",
+            "flashattention_v2",
+            "flash_attention_3"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "flashattention_v1_s4_c0",
+            "flashattention_v1_s53_c0",
+            "flashattention_v1_s6_c0",
+            "flashattention_v2_s0_c0",
+            "flashattention_v2_s11_c0"
+          ],
+          "paper_ids": [
+            "flashattention_v1",
+            "flashattention_v1",
+            "flashattention_v1",
+            "flashattention_v2",
+            "flashattention_v2"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "flashattention_v1_s53_c0",
+            "flashattention_v1_s4_c0",
+            "flashattention_v1_s1_c0",
+            "flashattention_v2_s0_c0",
+            "flashattention_v1_s6_c0"
+          ],
+          "paper_ids": [
+            "flashattention_v1",
+            "flashattention_v1",
+            "flashattention_v1",
+            "flashattention_v2",
+            "flashattention_v1"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "flashattention_v1_s4_c0",
+            "flashattention_v2_s0_c0",
+            "flash_attention_3_s2_c0",
+            "flash_attention_3_s0_c0",
+            "flashattention_v1_s53_c0"
+          ],
+          "paper_ids": [
+            "flashattention_v1",
+            "flashattention_v2",
+            "flash_attention_3",
+            "flash_attention_3",
+            "flashattention_v1"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 53.08,
+        "bm25": 4.8,
+        "hybrid": 57.44,
+        "hybrid_rerank": 1610.14
+      }
+    },
+    {
+      "id": "eval_02",
+      "query": "What architectural improvements are introduced in FlashAttention-2 compared to FlashAttention-1?",
+      "target_papers": [
+        "flashattention_v2"
+      ],
+      "gold_chunks": [
+        "flashattention_v2_s0_c0",
+        "flashattention_v2_s1_c0",
+        "flashattention_v2_s11_c0"
+      ],
+      "query_type": "Comparative",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "flash_attention_3_s25_c1",
+            "flashattention_v1_s44_c1",
+            "flashattention_v2_s55_c0",
+            "flashattention_v1_s31_c0",
+            "flashattention_v2_s54_c2"
+          ],
+          "paper_ids": [
+            "flash_attention_3",
+            "flashattention_v1",
+            "flashattention_v2",
+            "flashattention_v1",
+            "flashattention_v2"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "mamba_s36_c1",
+            "flash_attention_3_s25_c1",
+            "flashattention_v2_s54_c2",
+            "flashattention_v2_s11_c0",
+            "flashattention_v2_s54_c3"
+          ],
+          "paper_ids": [
+            "mamba",
+            "flash_attention_3",
+            "flashattention_v2",
+            "flashattention_v2",
+            "flashattention_v2"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "flash_attention_3_s25_c1",
+            "flashattention_v2_s54_c2",
+            "flashattention_v2_s55_c0",
+            "flashattention_v2_s11_c0",
+            "flash_attention_3_s25_c2"
+          ],
+          "paper_ids": [
+            "flash_attention_3",
+            "flashattention_v2",
+            "flashattention_v2",
+            "flashattention_v2",
+            "flash_attention_3"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "flashattention_v2_s54_c2",
+            "flashattention_v2_s1_c1",
+            "flash_attention_3_s25_c1",
+            "flash_attention_3_s25_c3",
+            "flash_attention_3_s0_c0"
+          ],
+          "paper_ids": [
+            "flashattention_v2",
+            "flashattention_v2",
+            "flash_attention_3",
+            "flash_attention_3",
+            "flash_attention_3"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 58.07,
+        "bm25": 6.34,
+        "hybrid": 60.75,
+        "hybrid_rerank": 1479.38
+      }
+    },
+    {
+      "id": "eval_03",
+      "query": "How does LoRA reduce the number of trainable parameters during fine-tuning?",
+      "target_papers": [
+        "lora"
+      ],
+      "gold_chunks": [
+        "lora_s4_c0",
+        "lora_s11_c0",
+        "lora_s0_c0"
+      ],
+      "query_type": "Mechanistic",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "dora_s0_c0",
+            "lora_s4_c1",
+            "lora_s13_c0",
+            "lora_s41_c0",
+            "dora_s38_c0"
+          ],
+          "paper_ids": [
+            "dora",
+            "lora",
+            "lora",
+            "lora",
+            "dora"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "lora_s13_c0",
+            "lora_s0_c0",
+            "dora_s3_c0",
+            "dora_s2_c0",
+            "dora_s36_c0"
+          ],
+          "paper_ids": [
+            "lora",
+            "lora",
+            "dora",
+            "dora",
+            "dora"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "lora_s13_c0",
+            "dora_s0_c0",
+            "dora_s3_c0",
+            "dora_s2_c0",
+            "lora_s0_c0"
+          ],
+          "paper_ids": [
+            "lora",
+            "dora",
+            "dora",
+            "dora",
+            "lora"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "lora_s0_c0",
+            "dora_s38_c0",
+            "lora_s13_c0",
+            "dora_s0_c0",
+            "lora_s82_c0"
+          ],
+          "paper_ids": [
+            "lora",
+            "dora",
+            "lora",
+            "dora",
+            "lora"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 56.1,
+        "bm25": 4.9,
+        "hybrid": 53.86,
+        "hybrid_rerank": 1444.48
+      }
+    },
+    {
+      "id": "eval_04",
+      "query": "What is NormalFloat4 (NF4) and Double Quantization in QLoRA?",
+      "target_papers": [
+        "qlora"
+      ],
+      "gold_chunks": [
+        "qlora_s0_c0",
+        "qlora_s15_c0",
+        "qlora_s11_c0"
+      ],
+      "query_type": "Terminology",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "qlora_s26_c0",
+            "qlora_s27_c0",
+            "qlora_s20_c0",
+            "qlora_s21_c0",
+            "qlora_s24_c0"
+          ],
+          "paper_ids": [
+            "qlora",
+            "qlora",
+            "qlora",
+            "qlora",
+            "qlora"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "qlora_s27_c0",
+            "qlora_s27_c1",
+            "qlora_s26_c1",
+            "qlora_s0_c0",
+            "qlora_s26_c0"
+          ],
+          "paper_ids": [
+            "qlora",
+            "qlora",
+            "qlora",
+            "qlora",
+            "qlora"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "qlora_s27_c0",
+            "qlora_s26_c0",
+            "qlora_s26_c1",
+            "qlora_s20_c0",
+            "dora_s39_c0"
+          ],
+          "paper_ids": [
+            "qlora",
+            "qlora",
+            "qlora",
+            "qlora",
+            "dora"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "qlora_s27_c0",
+            "qlora_s15_c0",
+            "qlora_s26_c0",
+            "qlora_s0_c0",
+            "qlora_s26_c1"
+          ],
+          "paper_ids": [
+            "qlora",
+            "qlora",
+            "qlora",
+            "qlora",
+            "qlora"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 54.64,
+        "bm25": 4.39,
+        "hybrid": 58.31,
+        "hybrid_rerank": 1493.35
+      }
+    },
+    {
+      "id": "eval_05",
+      "query": "How does PagedAttention eliminate memory fragmentation in vLLM?",
+      "target_papers": [
+        "vllm_pagedattention"
+      ],
+      "gold_chunks": [
+        "vllm_pagedattention_s24_c2",
+        "vllm_pagedattention_s6_c0",
+        "vllm_pagedattention_s14_c0"
+      ],
+      "query_type": "Mechanistic",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "vllm_pagedattention_s6_c0",
+            "vllm_pagedattention_s0_c0",
+            "vllm_pagedattention_s16_c1",
+            "vllm_pagedattention_s14_c0",
+            "vllm_pagedattention_s12_c0"
+          ],
+          "paper_ids": [
+            "vllm_pagedattention",
+            "vllm_pagedattention",
+            "vllm_pagedattention",
+            "vllm_pagedattention",
+            "vllm_pagedattention"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "vllm_pagedattention_s24_c4",
+            "vllm_pagedattention_s6_c0",
+            "vllm_pagedattention_s16_c1",
+            "vllm_pagedattention_s16_c0",
+            "vllm_pagedattention_s12_c0"
+          ],
+          "paper_ids": [
+            "vllm_pagedattention",
+            "vllm_pagedattention",
+            "vllm_pagedattention",
+            "vllm_pagedattention",
+            "vllm_pagedattention"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "vllm_pagedattention_s6_c0",
+            "vllm_pagedattention_s16_c1",
+            "vllm_pagedattention_s0_c0",
+            "vllm_pagedattention_s12_c0",
+            "vllm_pagedattention_s16_c0"
+          ],
+          "paper_ids": [
+            "vllm_pagedattention",
+            "vllm_pagedattention",
+            "vllm_pagedattention",
+            "vllm_pagedattention",
+            "vllm_pagedattention"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "vllm_pagedattention_s6_c0",
+            "vllm_pagedattention_s16_c0",
+            "vllm_pagedattention_s16_c1",
+            "vllm_pagedattention_s24_c4",
+            "vllm_pagedattention_s13_c0"
+          ],
+          "paper_ids": [
+            "vllm_pagedattention",
+            "vllm_pagedattention",
+            "vllm_pagedattention",
+            "vllm_pagedattention",
+            "vllm_pagedattention"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 47.82,
+        "bm25": 4.13,
+        "hybrid": 50.1,
+        "hybrid_rerank": 1447.44
+      }
+    },
+    {
+      "id": "eval_06",
+      "query": "How does GPTQ perform one-shot post-training quantization?",
+      "target_papers": [
+        "gptq"
+      ],
+      "gold_chunks": [
+        "gptq_s4_c0",
+        "gptq_s11_c0",
+        "gptq_s12_c0"
+      ],
+      "query_type": "Mechanistic",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "spqr_quantization_s8_c0",
+            "gptq_s26_c0",
+            "gptq_s26_c1",
+            "gptq_s11_c0",
+            "gptq_s4_c0"
+          ],
+          "paper_ids": [
+            "spqr_quantization",
+            "gptq",
+            "gptq",
+            "gptq",
+            "gptq"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "gptq_s3_c0",
+            "gptq_s26_c1",
+            "gptq_s4_c0",
+            "gptq_s11_c0",
+            "gptq_s0_c0"
+          ],
+          "paper_ids": [
+            "gptq",
+            "gptq",
+            "gptq",
+            "gptq",
+            "gptq"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "gptq_s26_c1",
+            "spqr_quantization_s8_c0",
+            "gptq_s26_c0",
+            "gptq_s4_c0",
+            "gptq_s11_c0"
+          ],
+          "paper_ids": [
+            "gptq",
+            "spqr_quantization",
+            "gptq",
+            "gptq",
+            "gptq"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "spqr_quantization_s8_c0",
+            "gptq_s4_c0",
+            "gptq_s0_c0",
+            "spqr_quantization_s35_c1",
+            "gptq_s26_c1"
+          ],
+          "paper_ids": [
+            "spqr_quantization",
+            "gptq",
+            "gptq",
+            "spqr_quantization",
+            "gptq"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 56.91,
+        "bm25": 3.47,
+        "hybrid": 57.47,
+        "hybrid_rerank": 1480.35
+      }
+    },
+    {
+      "id": "eval_07",
+      "query": "Why does AWQ focus on protecting the top 1% salient weights based on activation magnitudes?",
+      "target_papers": [
+        "awq"
+      ],
+      "gold_chunks": [
+        "awq_s34_c0",
+        "awq_s10_c0",
+        "awq_s12_c0"
+      ],
+      "query_type": "Trade-off",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "awq_s16_c0",
+            "awq_s23_c0",
+            "awq_s25_c0",
+            "awq_s1_c0",
+            "awq_s30_c5"
+          ],
+          "paper_ids": [
+            "awq",
+            "awq",
+            "awq",
+            "awq",
+            "awq"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "awq_s14_c0",
+            "awq_s10_c0",
+            "awq_s23_c0",
+            "awq_s1_c0",
+            "awq_s34_c0"
+          ],
+          "paper_ids": [
+            "awq",
+            "awq",
+            "awq",
+            "awq",
+            "awq"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "awq_s23_c0",
+            "awq_s16_c0",
+            "awq_s14_c0",
+            "awq_s1_c0",
+            "awq_s25_c0"
+          ],
+          "paper_ids": [
+            "awq",
+            "awq",
+            "awq",
+            "awq",
+            "awq"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "awq_s23_c0",
+            "awq_s14_c0",
+            "awq_s16_c0",
+            "awq_s34_c0",
+            "awq_s1_c0"
+          ],
+          "paper_ids": [
+            "awq",
+            "awq",
+            "awq",
+            "awq",
+            "awq"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 52.18,
+        "bm25": 6.01,
+        "hybrid": 56.98,
+        "hybrid_rerank": 1491.67
+      }
+    },
+    {
+      "id": "eval_08",
+      "query": "How does SmoothQuant enable INT8 quantization of both activations and weights?",
+      "target_papers": [
+        "smoothquant"
+      ],
+      "gold_chunks": [
+        "smoothquant_s19_c0",
+        "smoothquant_s22_c2",
+        "smoothquant_s0_c0"
+      ],
+      "query_type": "Mechanistic",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "smoothquant_s4_c1",
+            "smoothquant_s19_c0",
+            "smoothquant_s30_c0",
+            "smoothquant_s22_c1",
+            "smoothquant_s0_c0"
+          ],
+          "paper_ids": [
+            "smoothquant",
+            "smoothquant",
+            "smoothquant",
+            "smoothquant",
+            "smoothquant"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "smoothquant_s4_c0",
+            "smoothquant_s6_c0",
+            "smoothquant_s19_c0",
+            "smoothquant_s0_c0",
+            "smoothquant_s5_c0"
+          ],
+          "paper_ids": [
+            "smoothquant",
+            "smoothquant",
+            "smoothquant",
+            "smoothquant",
+            "smoothquant"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "smoothquant_s19_c0",
+            "smoothquant_s6_c0",
+            "smoothquant_s0_c0",
+            "smoothquant_s30_c0",
+            "smoothquant_s5_c0"
+          ],
+          "paper_ids": [
+            "smoothquant",
+            "smoothquant",
+            "smoothquant",
+            "smoothquant",
+            "smoothquant"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "smoothquant_s30_c0",
+            "smoothquant_s6_c0",
+            "smoothquant_s0_c0",
+            "smoothquant_s19_c0",
+            "smoothquant_s5_c0"
+          ],
+          "paper_ids": [
+            "smoothquant",
+            "smoothquant",
+            "smoothquant",
+            "smoothquant",
+            "smoothquant"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 61.69,
+        "bm25": 4.99,
+        "hybrid": 54.08,
+        "hybrid_rerank": 1455.55
+      }
+    },
+    {
+      "id": "eval_09",
+      "query": "What is the core concept of Speculative Decoding for accelerating autoregressive generation?",
+      "target_papers": [
+        "speculative_decoding"
+      ],
+      "gold_chunks": [
+        "speculative_decoding_s7_c0",
+        "speculative_decoding_s12_c0",
+        "speculative_decoding_s63_c0"
+      ],
+      "query_type": "Conceptual",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "speculative_eagle_s32_c0",
+            "medusa_s43_c1",
+            "speculative_eagle_s0_c0",
+            "speculative_decoding_s96_c0",
+            "speculative_eagle_s2_c0"
+          ],
+          "paper_ids": [
+            "speculative_eagle",
+            "medusa",
+            "speculative_eagle",
+            "speculative_decoding",
+            "speculative_eagle"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "speculative_eagle_s32_c0",
+            "speculative_decoding_s103_c0",
+            "medusa_s40_c0",
+            "speculative_eagle_s31_c0",
+            "speculative_eagle_s0_c0"
+          ],
+          "paper_ids": [
+            "speculative_eagle",
+            "speculative_decoding",
+            "medusa",
+            "speculative_eagle",
+            "speculative_eagle"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "speculative_eagle_s32_c0",
+            "speculative_eagle_s0_c0",
+            "speculative_eagle_s2_c0",
+            "speculative_eagle_s31_c0",
+            "speculative_decoding_s78_c0"
+          ],
+          "paper_ids": [
+            "speculative_eagle",
+            "speculative_eagle",
+            "speculative_eagle",
+            "speculative_eagle",
+            "speculative_decoding"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "speculative_eagle_s2_c0",
+            "speculative_eagle_s32_c0",
+            "medusa_s43_c1",
+            "speculative_eagle_s0_c0",
+            "speculative_decoding_s78_c0"
+          ],
+          "paper_ids": [
+            "speculative_eagle",
+            "speculative_eagle",
+            "medusa",
+            "speculative_eagle",
+            "speculative_decoding"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 60.36,
+        "bm25": 5.37,
+        "hybrid": 55.97,
+        "hybrid_rerank": 1444.22
+      }
+    },
+    {
+      "id": "eval_10",
+      "query": "What triple loss function does DistilBERT use during knowledge distillation?",
+      "target_papers": [
+        "distilbert"
+      ],
+      "gold_chunks": [
+        "distilbert_s2_c0",
+        "distilbert_s6_c0",
+        "distilbert_s1_c0"
+      ],
+      "query_type": "Mechanistic",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "distilbert_s6_c0",
+            "distilbert_s0_c0",
+            "kv_cache_compression_h2o_s21_c2",
+            "distilbert_s7_c0",
+            "distilbert_s8_c1"
+          ],
+          "paper_ids": [
+            "distilbert",
+            "distilbert",
+            "kv_cache_compression_h2o",
+            "distilbert",
+            "distilbert"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "distilbert_s6_c0",
+            "distilbert_s0_c0",
+            "distilbert_s3_c0",
+            "distilbert_s1_c0",
+            "distilbert_s2_c0"
+          ],
+          "paper_ids": [
+            "distilbert",
+            "distilbert",
+            "distilbert",
+            "distilbert",
+            "distilbert"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "distilbert_s6_c0",
+            "distilbert_s0_c0",
+            "distilbert_s3_c0",
+            "distilbert_s7_c0",
+            "kv_cache_compression_h2o_s21_c2"
+          ],
+          "paper_ids": [
+            "distilbert",
+            "distilbert",
+            "distilbert",
+            "distilbert",
+            "kv_cache_compression_h2o"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "distilbert_s6_c0",
+            "distilbert_s0_c0",
+            "distilbert_s3_c0",
+            "distilbert_s1_c0",
+            "distilbert_s8_c0"
+          ],
+          "paper_ids": [
+            "distilbert",
+            "distilbert",
+            "distilbert",
+            "distilbert",
+            "distilbert"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 58.15,
+        "bm25": 5.65,
+        "hybrid": 56.99,
+        "hybrid_rerank": 1466.88
+      }
+    },
+    {
+      "id": "eval_11",
+      "query": "How does DoRA decompose weight matrices differently from standard LoRA?",
+      "target_papers": [
+        "dora"
+      ],
+      "gold_chunks": [
+        "dora_s2_c0",
+        "dora_s17_c0",
+        "dora_s10_c0"
+      ],
+      "query_type": "Comparative",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "dora_s17_c0",
+            "dora_s73_c0",
+            "dora_s10_c0",
+            "dora_s20_c0",
+            "dora_s0_c0"
+          ],
+          "paper_ids": [
+            "dora",
+            "dora",
+            "dora",
+            "dora",
+            "dora"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "dora_s17_c0",
+            "dora_s73_c1",
+            "dora_s2_c0",
+            "dora_s37_c1",
+            "dora_s73_c0"
+          ],
+          "paper_ids": [
+            "dora",
+            "dora",
+            "dora",
+            "dora",
+            "dora"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "dora_s17_c0",
+            "dora_s73_c0",
+            "dora_s2_c0",
+            "dora_s0_c0",
+            "dora_s20_c0"
+          ],
+          "paper_ids": [
+            "dora",
+            "dora",
+            "dora",
+            "dora",
+            "dora"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "dora_s17_c0",
+            "dora_s73_c0",
+            "dora_s0_c0",
+            "dora_s20_c0",
+            "dora_s73_c1"
+          ],
+          "paper_ids": [
+            "dora",
+            "dora",
+            "dora",
+            "dora",
+            "dora"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 46.78,
+        "bm25": 4.92,
+        "hybrid": 47.39,
+        "hybrid_rerank": 1437.55
+      }
+    },
+    {
+      "id": "eval_12",
+      "query": "How does Flash-Decoding optimize LLM generation for long contexts during inference?",
+      "target_papers": [
+        "flashdecoding"
+      ],
+      "gold_chunks": [
+        "flashdecoding_s2_c0",
+        "flashdecoding_s3_c1",
+        "flashdecoding_s8_c0"
+      ],
+      "query_type": "Mechanistic",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "streaming_llm_s14_c3",
+            "streaming_llm_s8_c1",
+            "streaming_llm_s8_c0",
+            "medusa_s6_c0",
+            "medusa_s43_c0"
+          ],
+          "paper_ids": [
+            "streaming_llm",
+            "streaming_llm",
+            "streaming_llm",
+            "medusa",
+            "medusa"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "streaming_llm_s8_c1",
+            "speculative_eagle_s13_c0",
+            "kv_cache_compression_h2o_s4_c0",
+            "streaming_llm_s4_c0",
+            "kv_cache_compression_h2o_s23_c1"
+          ],
+          "paper_ids": [
+            "streaming_llm",
+            "speculative_eagle",
+            "kv_cache_compression_h2o",
+            "streaming_llm",
+            "kv_cache_compression_h2o"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "streaming_llm_s8_c1",
+            "kv_cache_compression_h2o_s4_c0",
+            "streaming_llm_s14_c3",
+            "speculative_eagle_s13_c0",
+            "streaming_llm_s8_c0"
+          ],
+          "paper_ids": [
+            "streaming_llm",
+            "kv_cache_compression_h2o",
+            "streaming_llm",
+            "speculative_eagle",
+            "streaming_llm"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "flashattention_v2_s1_c0",
+            "streaming_llm_s8_c0",
+            "streaming_llm_s8_c1",
+            "medusa_s0_c0",
+            "medusa_s30_c0"
+          ],
+          "paper_ids": [
+            "flashattention_v2",
+            "streaming_llm",
+            "streaming_llm",
+            "medusa",
+            "medusa"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 50.71,
+        "bm25": 4.84,
+        "hybrid": 55.49,
+        "hybrid_rerank": 1466.81
+      }
+    },
+    {
+      "id": "eval_13",
+      "query": "What is the role of attention sinks in StreamingLLM for infinite sequence streaming?",
+      "target_papers": [
+        "streaming_llm"
+      ],
+      "gold_chunks": [
+        "streaming_llm_s11_c0",
+        "streaming_llm_s11_c1",
+        "streaming_llm_s7_c0"
+      ],
+      "query_type": "Conceptual",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "streaming_llm_s3_c0",
+            "streaming_llm_s17_c0",
+            "streaming_llm_s7_c1",
+            "streaming_llm_s11_c1",
+            "kv_cache_compression_h2o_s13_c0"
+          ],
+          "paper_ids": [
+            "streaming_llm",
+            "streaming_llm",
+            "streaming_llm",
+            "streaming_llm",
+            "kv_cache_compression_h2o"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "streaming_llm_s7_c1",
+            "streaming_llm_s3_c0",
+            "streaming_llm_s11_c1",
+            "streaming_llm_s11_c0",
+            "streaming_llm_s17_c0"
+          ],
+          "paper_ids": [
+            "streaming_llm",
+            "streaming_llm",
+            "streaming_llm",
+            "streaming_llm",
+            "streaming_llm"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "streaming_llm_s3_c0",
+            "streaming_llm_s7_c1",
+            "streaming_llm_s17_c0",
+            "streaming_llm_s11_c1",
+            "streaming_llm_s14_c3"
+          ],
+          "paper_ids": [
+            "streaming_llm",
+            "streaming_llm",
+            "streaming_llm",
+            "streaming_llm",
+            "streaming_llm"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "streaming_llm_s3_c0",
+            "streaming_llm_s17_c0",
+            "streaming_llm_s17_c7",
+            "kv_cache_compression_h2o_s13_c0",
+            "streaming_llm_s11_c1"
+          ],
+          "paper_ids": [
+            "streaming_llm",
+            "streaming_llm",
+            "streaming_llm",
+            "kv_cache_compression_h2o",
+            "streaming_llm"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 51.86,
+        "bm25": 5.56,
+        "hybrid": 53.87,
+        "hybrid_rerank": 1498.64
+      }
+    },
+    {
+      "id": "eval_14",
+      "query": "How does RadixAttention in SGLang enable automatic KV cache reuse across queries?",
+      "target_papers": [
+        "sglang_radix"
+      ],
+      "gold_chunks": [
+        "sglang_radix_s5_c2",
+        "sglang_radix_s6_c0",
+        "sglang_radix_s7_c0"
+      ],
+      "query_type": "Mechanistic",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "sglang_radix_s6_c0",
+            "sglang_radix_s4_c1",
+            "sglang_radix_s7_c1",
+            "sglang_radix_s4_c4",
+            "sglang_radix_s5_c3"
+          ],
+          "paper_ids": [
+            "sglang_radix",
+            "sglang_radix",
+            "sglang_radix",
+            "sglang_radix",
+            "sglang_radix"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "sglang_radix_s4_c4",
+            "sglang_radix_s4_c1",
+            "sglang_radix_s6_c0",
+            "sglang_radix_s5_c1",
+            "sglang_radix_s0_c0"
+          ],
+          "paper_ids": [
+            "sglang_radix",
+            "sglang_radix",
+            "sglang_radix",
+            "sglang_radix",
+            "sglang_radix"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "sglang_radix_s6_c0",
+            "sglang_radix_s4_c1",
+            "sglang_radix_s4_c4",
+            "sglang_radix_s5_c1",
+            "sglang_radix_s7_c1"
+          ],
+          "paper_ids": [
+            "sglang_radix",
+            "sglang_radix",
+            "sglang_radix",
+            "sglang_radix",
+            "sglang_radix"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "sglang_radix_s4_c1",
+            "sglang_radix_s6_c0",
+            "sglang_radix_s4_c4",
+            "sglang_radix_s5_c1",
+            "sglang_radix_s7_c1"
+          ],
+          "paper_ids": [
+            "sglang_radix",
+            "sglang_radix",
+            "sglang_radix",
+            "sglang_radix",
+            "sglang_radix"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 53.9,
+        "bm25": 4.94,
+        "hybrid": 57.27,
+        "hybrid_rerank": 1485.23
+      }
+    },
+    {
+      "id": "eval_15",
+      "query": "How does Medusa accelerate generation using multiple decoding heads without a separate draft model?",
+      "target_papers": [
+        "medusa"
+      ],
+      "gold_chunks": [
+        "medusa_s43_c1",
+        "medusa_s43_c3",
+        "medusa_s8_c0"
+      ],
+      "query_type": "Mechanistic",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "medusa_s8_c0",
+            "medusa_s7_c1",
+            "medusa_s6_c0",
+            "medusa_s7_c0",
+            "medusa_s29_c1"
+          ],
+          "paper_ids": [
+            "medusa",
+            "medusa",
+            "medusa",
+            "medusa",
+            "medusa"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "medusa_s6_c0",
+            "medusa_s20_c0",
+            "medusa_s43_c1",
+            "medusa_s7_c0",
+            "medusa_s0_c0"
+          ],
+          "paper_ids": [
+            "medusa",
+            "medusa",
+            "medusa",
+            "medusa",
+            "medusa"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "medusa_s6_c0",
+            "medusa_s8_c0",
+            "medusa_s7_c0",
+            "medusa_s0_c0",
+            "medusa_s7_c1"
+          ],
+          "paper_ids": [
+            "medusa",
+            "medusa",
+            "medusa",
+            "medusa",
+            "medusa"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "medusa_s7_c0",
+            "medusa_s6_c0",
+            "medusa_s8_c0",
+            "medusa_s25_c0",
+            "medusa_s20_c0"
+          ],
+          "paper_ids": [
+            "medusa",
+            "medusa",
+            "medusa",
+            "medusa",
+            "medusa"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 52.66,
+        "bm25": 5.76,
+        "hybrid": 57.3,
+        "hybrid_rerank": 1469.74
+      }
+    },
+    {
+      "id": "eval_16",
+      "query": "What memory components are partitioned in ZeRO-1, ZeRO-2, and ZeRO-3 stages in DeepSpeed?",
+      "target_papers": [
+        "deepspeed_zero"
+      ],
+      "gold_chunks": [
+        "deepspeed_zero_s1_c1",
+        "deepspeed_zero_s1_c2",
+        "deepspeed_zero_s3_c1"
+      ],
+      "query_type": "Comparative",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "deepspeed_zero_s7_c0",
+            "deepspeed_zero_s4_c0",
+            "deepspeed_zero_s1_c2",
+            "flashattention_v1_s16_c0",
+            "mamba_s35_c1"
+          ],
+          "paper_ids": [
+            "deepspeed_zero",
+            "deepspeed_zero",
+            "deepspeed_zero",
+            "flashattention_v1",
+            "mamba"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "deepspeed_zero_s17_c0",
+            "kv_cache_compression_h2o_s12_c1",
+            "flashattention_v2_s11_c0",
+            "sglang_radix_s4_c5",
+            "mamba_s2_c0"
+          ],
+          "paper_ids": [
+            "deepspeed_zero",
+            "kv_cache_compression_h2o",
+            "flashattention_v2",
+            "sglang_radix",
+            "mamba"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "deepspeed_zero_s1_c2",
+            "deepspeed_zero_s17_c0",
+            "deepspeed_zero_s1_c1",
+            "deepspeed_zero_s15_c0",
+            "flashattention_v2_s11_c0"
+          ],
+          "paper_ids": [
+            "deepspeed_zero",
+            "deepspeed_zero",
+            "deepspeed_zero",
+            "deepspeed_zero",
+            "flashattention_v2"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "deepspeed_zero_s1_c2",
+            "deepspeed_zero_s7_c0",
+            "deepspeed_zero_s1_c1",
+            "deepspeed_zero_s15_c0",
+            "deepspeed_zero_s17_c0"
+          ],
+          "paper_ids": [
+            "deepspeed_zero",
+            "deepspeed_zero",
+            "deepspeed_zero",
+            "deepspeed_zero",
+            "deepspeed_zero"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 60.95,
+        "bm25": 5.75,
+        "hybrid": 58.08,
+        "hybrid_rerank": 1436.64
+      }
+    },
+    {
+      "id": "eval_17",
+      "query": "What compute-optimal token-to-parameter ratio was established by Chinchilla?",
+      "target_papers": [
+        "chinchilla_scaling"
+      ],
+      "gold_chunks": [
+        "chinchilla_scaling_s2_c0",
+        "chinchilla_scaling_s3_c0",
+        "chinchilla_scaling_s23_c0"
+      ],
+      "query_type": "Numerical",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "chinchilla_scaling_s32_c0",
+            "chinchilla_scaling_s33_c0",
+            "chinchilla_scaling_s1_c0",
+            "chinchilla_scaling_s3_c0",
+            "chinchilla_scaling_s37_c0"
+          ],
+          "paper_ids": [
+            "chinchilla_scaling",
+            "chinchilla_scaling",
+            "chinchilla_scaling",
+            "chinchilla_scaling",
+            "chinchilla_scaling"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "chinchilla_scaling_s62_c0",
+            "chinchilla_scaling_s1_c0",
+            "chinchilla_scaling_s3_c0",
+            "llama_paper_s24_c13",
+            "chinchilla_scaling_s43_c0"
+          ],
+          "paper_ids": [
+            "chinchilla_scaling",
+            "chinchilla_scaling",
+            "chinchilla_scaling",
+            "llama_paper",
+            "chinchilla_scaling"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "chinchilla_scaling_s1_c0",
+            "chinchilla_scaling_s3_c0",
+            "chinchilla_scaling_s62_c0",
+            "chinchilla_scaling_s41_c0",
+            "chinchilla_scaling_s37_c0"
+          ],
+          "paper_ids": [
+            "chinchilla_scaling",
+            "chinchilla_scaling",
+            "chinchilla_scaling",
+            "chinchilla_scaling",
+            "chinchilla_scaling"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "chinchilla_scaling_s32_c0",
+            "chinchilla_scaling_s1_c0",
+            "chinchilla_scaling_s63_c0",
+            "chinchilla_scaling_s3_c0",
+            "chinchilla_scaling_s62_c0"
+          ],
+          "paper_ids": [
+            "chinchilla_scaling",
+            "chinchilla_scaling",
+            "chinchilla_scaling",
+            "chinchilla_scaling",
+            "chinchilla_scaling"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 53.69,
+        "bm25": 4.08,
+        "hybrid": 53.12,
+        "hybrid_rerank": 1590.56
+      }
+    },
+    {
+      "id": "eval_18",
+      "query": "How does Grouped-Query Attention (GQA) reduce memory bandwidth compared to Multi-Head Attention?",
+      "target_papers": [
+        "mqa_gqa"
+      ],
+      "gold_chunks": [
+        "mqa_gqa_s0_c0",
+        "mqa_gqa_s6_c0",
+        "mqa_gqa_s7_c1"
+      ],
+      "query_type": "Trade-off",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "mqa_gqa_s7_c1",
+            "mqa_gqa_s6_c0",
+            "flashattention_v2_s54_c0",
+            "mqa_gqa_s4_c0",
+            "mqa_gqa_s2_c0"
+          ],
+          "paper_ids": [
+            "mqa_gqa",
+            "mqa_gqa",
+            "flashattention_v2",
+            "mqa_gqa",
+            "mqa_gqa"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "mqa_gqa_s7_c1",
+            "mqa_gqa_s6_c0",
+            "mqa_gqa_s0_c0",
+            "mqa_gqa_s2_c0",
+            "mqa_gqa_s4_c0"
+          ],
+          "paper_ids": [
+            "mqa_gqa",
+            "mqa_gqa",
+            "mqa_gqa",
+            "mqa_gqa",
+            "mqa_gqa"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "mqa_gqa_s7_c1",
+            "mqa_gqa_s6_c0",
+            "mqa_gqa_s0_c0",
+            "mqa_gqa_s4_c0",
+            "mqa_gqa_s2_c0"
+          ],
+          "paper_ids": [
+            "mqa_gqa",
+            "mqa_gqa",
+            "mqa_gqa",
+            "mqa_gqa",
+            "mqa_gqa"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "mqa_gqa_s6_c0",
+            "mqa_gqa_s0_c0",
+            "mqa_gqa_s7_c1",
+            "flashattention_v2_s54_c0",
+            "mqa_gqa_s4_c0"
+          ],
+          "paper_ids": [
+            "mqa_gqa",
+            "mqa_gqa",
+            "mqa_gqa",
+            "flashattention_v2",
+            "mqa_gqa"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 55.01,
+        "bm25": 7.31,
+        "hybrid": 60.43,
+        "hybrid_rerank": 1529.83
+      }
+    },
+    {
+      "id": "eval_19",
+      "query": "What are the dual parallel and recurrent representation modes of RetNet?",
+      "target_papers": [
+        "retnet"
+      ],
+      "gold_chunks": [
+        "retnet_s6_c0",
+        "retnet_s46_c0",
+        "retnet_s0_c0"
+      ],
+      "query_type": "Conceptual",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "retnet_s17_c0",
+            "retnet_s0_c0",
+            "retnet_s33_c0",
+            "retnet_s6_c0",
+            "retnet_s46_c0"
+          ],
+          "paper_ids": [
+            "retnet",
+            "retnet",
+            "retnet",
+            "retnet",
+            "retnet"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "retnet_s17_c0",
+            "retnet_s6_c0",
+            "retnet_s33_c0",
+            "retnet_s0_c0",
+            "retnet_s18_c0"
+          ],
+          "paper_ids": [
+            "retnet",
+            "retnet",
+            "retnet",
+            "retnet",
+            "retnet"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "retnet_s17_c0",
+            "retnet_s0_c0",
+            "retnet_s6_c0",
+            "retnet_s33_c0",
+            "retnet_s2_c0"
+          ],
+          "paper_ids": [
+            "retnet",
+            "retnet",
+            "retnet",
+            "retnet",
+            "retnet"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "retnet_s17_c0",
+            "retnet_s2_c0",
+            "retnet_s0_c0",
+            "retnet_s7_c0",
+            "retnet_s33_c0"
+          ],
+          "paper_ids": [
+            "retnet",
+            "retnet",
+            "retnet",
+            "retnet",
+            "retnet"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 50.71,
+        "bm25": 4.84,
+        "hybrid": 52.48,
+        "hybrid_rerank": 1455.76
+      }
+    },
+    {
+      "id": "eval_20",
+      "query": "How does Mamba achieve linear-time sequence modeling with selective state spaces?",
+      "target_papers": [
+        "mamba"
+      ],
+      "gold_chunks": [
+        "mamba_s9_c2",
+        "mamba_s9_c4",
+        "mamba_s9_c5"
+      ],
+      "query_type": "Mechanistic",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "mamba_s30_c0",
+            "mamba_s1_c2",
+            "mamba_s9_c2",
+            "mamba_s9_c1",
+            "mamba_s1_c1"
+          ],
+          "paper_ids": [
+            "mamba",
+            "mamba",
+            "mamba",
+            "mamba",
+            "mamba"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "flashdecoding_s34_c0",
+            "mamba_s1_c1",
+            "mamba_s9_c2",
+            "flashdecoding_s33_c0",
+            "mamba_s27_c0"
+          ],
+          "paper_ids": [
+            "flashdecoding",
+            "mamba",
+            "mamba",
+            "flashdecoding",
+            "mamba"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "mamba_s9_c2",
+            "mamba_s1_c1",
+            "flashdecoding_s34_c0",
+            "flashdecoding_s33_c0",
+            "mamba_s0_c0"
+          ],
+          "paper_ids": [
+            "mamba",
+            "mamba",
+            "flashdecoding",
+            "flashdecoding",
+            "mamba"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "mamba_s30_c0",
+            "mamba_s0_c0",
+            "mamba_s1_c1",
+            "mamba_s1_c2",
+            "mamba_s9_c2"
+          ],
+          "paper_ids": [
+            "mamba",
+            "mamba",
+            "mamba",
+            "mamba",
+            "mamba"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 47.79,
+        "bm25": 4.43,
+        "hybrid": 49.28,
+        "hybrid_rerank": 1435.29
+      }
+    },
+    {
+      "id": "eval_21",
+      "query": "What architectural modifications were adopted in LLaMA compared to the original Transformer?",
+      "target_papers": [
+        "llama_paper"
+      ],
+      "gold_chunks": [
+        "llama_paper_s11_c0",
+        "llama_paper_s0_c0",
+        "llama_paper_s24_c8"
+      ],
+      "query_type": "Mechanistic",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "llama2_paper_s10_c0",
+            "mamba_s36_c1",
+            "llama2_paper_s12_c0",
+            "llama2_paper_s25_c0",
+            "llama2_paper_s26_c0"
+          ],
+          "paper_ids": [
+            "llama2_paper",
+            "mamba",
+            "llama2_paper",
+            "llama2_paper",
+            "llama2_paper"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "mamba_s36_c0",
+            "mamba_s36_c1",
+            "llama2_paper_s12_c0",
+            "sparse_attention_longformer_s15_c1",
+            "flashdecoding_s3_c1"
+          ],
+          "paper_ids": [
+            "mamba",
+            "mamba",
+            "llama2_paper",
+            "sparse_attention_longformer",
+            "flashdecoding"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "mamba_s36_c1",
+            "llama2_paper_s12_c0",
+            "awq_s8_c0",
+            "llama_paper_s12_c0",
+            "llama2_paper_s10_c0"
+          ],
+          "paper_ids": [
+            "mamba",
+            "llama2_paper",
+            "awq",
+            "llama_paper",
+            "llama2_paper"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "llama2_paper_s12_c0",
+            "mamba_s36_c0",
+            "mamba_s36_c1",
+            "llama2_paper_s10_c0",
+            "dora_s35_c0"
+          ],
+          "paper_ids": [
+            "llama2_paper",
+            "mamba",
+            "mamba",
+            "llama2_paper",
+            "dora"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 48.2,
+        "bm25": 5.53,
+        "hybrid": 53.12,
+        "hybrid_rerank": 1445.29
+      }
+    },
+    {
+      "id": "eval_22",
+      "query": "What context length expansion and attention mechanism were introduced in Llama 2?",
+      "target_papers": [
+        "llama2_paper"
+      ],
+      "gold_chunks": [
+        "llama2_paper_s9_c1",
+        "llama2_paper_s3_c0",
+        "llama2_paper_s9_c0"
+      ],
+      "query_type": "Numerical",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "llama2_paper_s33_c0",
+            "llama2_paper_s10_c0",
+            "streaming_llm_s17_c9",
+            "streaming_llm_s9_c0",
+            "streaming_llm_s14_c3"
+          ],
+          "paper_ids": [
+            "llama2_paper",
+            "llama2_paper",
+            "streaming_llm",
+            "streaming_llm",
+            "streaming_llm"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "mamba_s36_c0",
+            "mamba_s13_c0",
+            "mamba_s2_c0",
+            "mamba_s9_c4",
+            "llama2_paper_s10_c0"
+          ],
+          "paper_ids": [
+            "mamba",
+            "mamba",
+            "mamba",
+            "mamba",
+            "llama2_paper"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "llama2_paper_s10_c0",
+            "llama2_paper_s12_c0",
+            "llama2_paper_s33_c0",
+            "mamba_s36_c0",
+            "mamba_s13_c0"
+          ],
+          "paper_ids": [
+            "llama2_paper",
+            "llama2_paper",
+            "llama2_paper",
+            "mamba",
+            "mamba"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "llama2_paper_s10_c0",
+            "llama2_paper_s12_c0",
+            "streaming_llm_s14_c3",
+            "streaming_llm_s17_c9",
+            "streaming_llm_s8_c0"
+          ],
+          "paper_ids": [
+            "llama2_paper",
+            "llama2_paper",
+            "streaming_llm",
+            "streaming_llm",
+            "streaming_llm"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 43.24,
+        "bm25": 4.94,
+        "hybrid": 48.51,
+        "hybrid_rerank": 1498.19
+      }
+    },
+    {
+      "id": "eval_23",
+      "query": "How does KIVI achieve 2-bit quantization for key-value caches?",
+      "target_papers": [
+        "kv_quant_kivi"
+      ],
+      "gold_chunks": [
+        "kv_quant_kivi_s4_c0",
+        "kv_quant_kivi_s3_c0",
+        "kv_quant_kivi_s9_c0"
+      ],
+      "query_type": "Terminology",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "kv_quant_kivi_s21_c0",
+            "kv_quant_kivi_s28_c0",
+            "kv_quant_kivi_s12_c0",
+            "kv_quant_kivi_s16_c0",
+            "kv_quant_kivi_s27_c1"
+          ],
+          "paper_ids": [
+            "kv_quant_kivi",
+            "kv_quant_kivi",
+            "kv_quant_kivi",
+            "kv_quant_kivi",
+            "kv_quant_kivi"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "gptq_s26_c5",
+            "kv_quant_kivi_s17_c0",
+            "kv_quant_kivi_s4_c0",
+            "kv_quant_kivi_s26_c0",
+            "kv_quant_kivi_s0_c0"
+          ],
+          "paper_ids": [
+            "gptq",
+            "kv_quant_kivi",
+            "kv_quant_kivi",
+            "kv_quant_kivi",
+            "kv_quant_kivi"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "kv_quant_kivi_s21_c0",
+            "kv_quant_kivi_s4_c0",
+            "kv_quant_kivi_s16_c0",
+            "kv_quant_kivi_s0_c0",
+            "kv_quant_kivi_s26_c0"
+          ],
+          "paper_ids": [
+            "kv_quant_kivi",
+            "kv_quant_kivi",
+            "kv_quant_kivi",
+            "kv_quant_kivi",
+            "kv_quant_kivi"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "kv_quant_kivi_s21_c0",
+            "kv_quant_kivi_s28_c0",
+            "kv_quant_kivi_s24_c0",
+            "kv_quant_kivi_s14_c1",
+            "kv_quant_kivi_s0_c0"
+          ],
+          "paper_ids": [
+            "kv_quant_kivi",
+            "kv_quant_kivi",
+            "kv_quant_kivi",
+            "kv_quant_kivi",
+            "kv_quant_kivi"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 56.28,
+        "bm25": 3.7,
+        "hybrid": 53.97,
+        "hybrid_rerank": 1433.45
+      }
+    },
+    {
+      "id": "eval_24",
+      "query": "How does Longformer combine local windowed and global attention for document processing?",
+      "target_papers": [
+        "sparse_attention_longformer"
+      ],
+      "gold_chunks": [
+        "sparse_attention_longformer_s0_c0",
+        "sparse_attention_longformer_s6_c0",
+        "sparse_attention_longformer_s7_c0"
+      ],
+      "query_type": "Conceptual",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "sparse_attention_longformer_s0_c0",
+            "streaming_llm_s8_c1",
+            "sparse_attention_longformer_s7_c0",
+            "kv_cache_compression_h2o_s26_c9",
+            "streaming_llm_s17_c6"
+          ],
+          "paper_ids": [
+            "sparse_attention_longformer",
+            "streaming_llm",
+            "sparse_attention_longformer",
+            "kv_cache_compression_h2o",
+            "streaming_llm"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "sparse_attention_longformer_s0_c0",
+            "sparse_attention_longformer_s7_c0",
+            "streaming_llm_s17_c5",
+            "sparse_attention_longformer_s12_c1",
+            "sparse_attention_longformer_s12_c0"
+          ],
+          "paper_ids": [
+            "sparse_attention_longformer",
+            "sparse_attention_longformer",
+            "streaming_llm",
+            "sparse_attention_longformer",
+            "sparse_attention_longformer"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "sparse_attention_longformer_s0_c0",
+            "sparse_attention_longformer_s7_c0",
+            "sparse_attention_longformer_s11_c4",
+            "sparse_attention_longformer_s12_c0",
+            "streaming_llm_s17_c6"
+          ],
+          "paper_ids": [
+            "sparse_attention_longformer",
+            "sparse_attention_longformer",
+            "sparse_attention_longformer",
+            "sparse_attention_longformer",
+            "streaming_llm"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "sparse_attention_longformer_s0_c0",
+            "sparse_attention_longformer_s7_c0",
+            "streaming_llm_s17_c6",
+            "sparse_attention_longformer_s8_c0",
+            "sparse_attention_longformer_s11_c4"
+          ],
+          "paper_ids": [
+            "sparse_attention_longformer",
+            "sparse_attention_longformer",
+            "streaming_llm",
+            "sparse_attention_longformer",
+            "sparse_attention_longformer"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 53.04,
+        "bm25": 5.92,
+        "hybrid": 49.55,
+        "hybrid_rerank": 1386.73
+      }
+    },
+    {
+      "id": "eval_25",
+      "query": "What hardware features does FlashAttention-3 leverage on Nvidia Hopper GPUs?",
+      "target_papers": [
+        "flash_attention_3"
+      ],
+      "gold_chunks": [
+        "flash_attention_3_s0_c0",
+        "flash_attention_3_s2_c0",
+        "flash_attention_3_s5_c1"
+      ],
+      "query_type": "Mechanistic",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "flash_attention_3_s3_c0",
+            "flash_attention_3_s2_c1",
+            "flash_attention_3_s0_c0",
+            "flash_attention_3_s25_c1",
+            "flashattention_v1_s4_c0"
+          ],
+          "paper_ids": [
+            "flash_attention_3",
+            "flash_attention_3",
+            "flash_attention_3",
+            "flash_attention_3",
+            "flashattention_v1"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "flash_attention_3_s25_c3",
+            "flash_attention_3_s0_c0",
+            "flash_attention_3_s5_c0",
+            "flash_attention_3_s5_c1",
+            "flash_attention_3_s2_c0"
+          ],
+          "paper_ids": [
+            "flash_attention_3",
+            "flash_attention_3",
+            "flash_attention_3",
+            "flash_attention_3",
+            "flash_attention_3"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "flash_attention_3_s0_c0",
+            "flash_attention_3_s3_c0",
+            "flash_attention_3_s25_c3",
+            "flash_attention_3_s5_c1",
+            "flash_attention_3_s2_c1"
+          ],
+          "paper_ids": [
+            "flash_attention_3",
+            "flash_attention_3",
+            "flash_attention_3",
+            "flash_attention_3",
+            "flash_attention_3"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "flash_attention_3_s0_c0",
+            "flash_attention_3_s3_c0",
+            "flash_attention_3_s5_c1",
+            "flash_attention_3_s5_c0",
+            "flash_attention_3_s25_c3"
+          ],
+          "paper_ids": [
+            "flash_attention_3",
+            "flash_attention_3",
+            "flash_attention_3",
+            "flash_attention_3",
+            "flash_attention_3"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 52.17,
+        "bm25": 6.66,
+        "hybrid": 53.67,
+        "hybrid_rerank": 1548.96
+      }
+    },
+    {
+      "id": "eval_26",
+      "query": "How does SpQR isolate outlier weights in low-bit LLM weight compression?",
+      "target_papers": [
+        "spqr_quantization"
+      ],
+      "gold_chunks": [
+        "spqr_quantization_s34_c2",
+        "spqr_quantization_s36_c1",
+        "spqr_quantization_s38_c0"
+      ],
+      "query_type": "Trade-off",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "spqr_quantization_s7_c1",
+            "spqr_quantization_s5_c0",
+            "spqr_quantization_s13_c3",
+            "spqr_quantization_s35_c0",
+            "spqr_quantization_s34_c0"
+          ],
+          "paper_ids": [
+            "spqr_quantization",
+            "spqr_quantization",
+            "spqr_quantization",
+            "spqr_quantization",
+            "spqr_quantization"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "spqr_quantization_s7_c0",
+            "spqr_quantization_s5_c0",
+            "spqr_quantization_s13_c2",
+            "awq_s34_c0",
+            "spqr_quantization_s7_c1"
+          ],
+          "paper_ids": [
+            "spqr_quantization",
+            "spqr_quantization",
+            "spqr_quantization",
+            "awq",
+            "spqr_quantization"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "spqr_quantization_s5_c0",
+            "spqr_quantization_s7_c1",
+            "spqr_quantization_s7_c0",
+            "spqr_quantization_s13_c3",
+            "spqr_quantization_s34_c0"
+          ],
+          "paper_ids": [
+            "spqr_quantization",
+            "spqr_quantization",
+            "spqr_quantization",
+            "spqr_quantization",
+            "spqr_quantization"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "spqr_quantization_s5_c0",
+            "spqr_quantization_s7_c0",
+            "spqr_quantization_s7_c1",
+            "spqr_quantization_s13_c3",
+            "awq_s34_c0"
+          ],
+          "paper_ids": [
+            "spqr_quantization",
+            "spqr_quantization",
+            "spqr_quantization",
+            "spqr_quantization",
+            "awq"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 46.91,
+        "bm25": 4.56,
+        "hybrid": 49.66,
+        "hybrid_rerank": 1443.95
+      }
+    },
+    {
+      "id": "eval_27",
+      "query": "What eviction policy does H2O (Heavy-Hitter Oracle) use to compress KV caches?",
+      "target_papers": [
+        "kv_cache_compression_h2o"
+      ],
+      "gold_chunks": [
+        "kv_cache_compression_h2o_s3_c0",
+        "kv_cache_compression_h2o_s9_c1",
+        "kv_cache_compression_h2o_s3_c1"
+      ],
+      "query_type": "Mechanistic",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "kv_cache_compression_h2o_s11_c1",
+            "kv_cache_compression_h2o_s19_c0",
+            "kv_cache_compression_h2o_s3_c1",
+            "kv_cache_compression_h2o_s3_c0",
+            "kv_cache_compression_h2o_s9_c0"
+          ],
+          "paper_ids": [
+            "kv_cache_compression_h2o",
+            "kv_cache_compression_h2o",
+            "kv_cache_compression_h2o",
+            "kv_cache_compression_h2o",
+            "kv_cache_compression_h2o"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "kv_cache_compression_h2o_s1_c0",
+            "kv_cache_compression_h2o_s9_c1",
+            "kv_cache_compression_h2o_s3_c0",
+            "kv_cache_compression_h2o_s4_c1",
+            "kv_cache_compression_h2o_s10_c0"
+          ],
+          "paper_ids": [
+            "kv_cache_compression_h2o",
+            "kv_cache_compression_h2o",
+            "kv_cache_compression_h2o",
+            "kv_cache_compression_h2o",
+            "kv_cache_compression_h2o"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "kv_cache_compression_h2o_s3_c0",
+            "kv_cache_compression_h2o_s9_c1",
+            "kv_cache_compression_h2o_s3_c1",
+            "kv_cache_compression_h2o_s11_c1",
+            "kv_cache_compression_h2o_s1_c0"
+          ],
+          "paper_ids": [
+            "kv_cache_compression_h2o",
+            "kv_cache_compression_h2o",
+            "kv_cache_compression_h2o",
+            "kv_cache_compression_h2o",
+            "kv_cache_compression_h2o"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "kv_cache_compression_h2o_s19_c0",
+            "kv_cache_compression_h2o_s1_c0",
+            "kv_cache_compression_h2o_s3_c0",
+            "kv_cache_compression_h2o_s9_c1",
+            "kv_cache_compression_h2o_s9_c0"
+          ],
+          "paper_ids": [
+            "kv_cache_compression_h2o",
+            "kv_cache_compression_h2o",
+            "kv_cache_compression_h2o",
+            "kv_cache_compression_h2o",
+            "kv_cache_compression_h2o"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 54.99,
+        "bm25": 5.34,
+        "hybrid": 54.49,
+        "hybrid_rerank": 1423.21
+      }
+    },
+    {
+      "id": "eval_28",
+      "query": "How does EAGLE differ from traditional token-level speculative sampling?",
+      "target_papers": [
+        "speculative_eagle"
+      ],
+      "gold_chunks": [
+        "speculative_eagle_s2_c0",
+        "speculative_eagle_s2_c1",
+        "speculative_eagle_s32_c0"
+      ],
+      "query_type": "Comparative",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "speculative_eagle_s8_c0",
+            "speculative_eagle_s58_c0",
+            "speculative_eagle_s32_c0",
+            "speculative_eagle_s57_c0",
+            "speculative_eagle_s0_c0"
+          ],
+          "paper_ids": [
+            "speculative_eagle",
+            "speculative_eagle",
+            "speculative_eagle",
+            "speculative_eagle",
+            "speculative_eagle"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "speculative_eagle_s8_c0",
+            "speculative_eagle_s58_c0",
+            "speculative_eagle_s32_c0",
+            "speculative_eagle_s19_c0",
+            "speculative_eagle_s0_c0"
+          ],
+          "paper_ids": [
+            "speculative_eagle",
+            "speculative_eagle",
+            "speculative_eagle",
+            "speculative_eagle",
+            "speculative_eagle"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "speculative_eagle_s8_c0",
+            "speculative_eagle_s58_c0",
+            "speculative_eagle_s32_c0",
+            "speculative_eagle_s0_c0",
+            "speculative_eagle_s57_c0"
+          ],
+          "paper_ids": [
+            "speculative_eagle",
+            "speculative_eagle",
+            "speculative_eagle",
+            "speculative_eagle",
+            "speculative_eagle"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "speculative_eagle_s0_c0",
+            "speculative_eagle_s32_c0",
+            "speculative_eagle_s8_c0",
+            "speculative_eagle_s2_c0",
+            "speculative_eagle_s10_c0"
+          ],
+          "paper_ids": [
+            "speculative_eagle",
+            "speculative_eagle",
+            "speculative_eagle",
+            "speculative_eagle",
+            "speculative_eagle"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 47.93,
+        "bm25": 4.26,
+        "hybrid": 46.23,
+        "hybrid_rerank": 1429.51
+      }
+    },
+    {
+      "id": "eval_29",
+      "query": "How does Unsloth optimize LoRA fine-tuning performance in Triton?",
+      "target_papers": [
+        "unsloth_lora"
+      ],
+      "gold_chunks": [
+        "unsloth_lora_s12_c0"
+      ],
+      "query_type": "Mechanistic",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "dora_s0_c0",
+            "dora_s38_c0",
+            "dora_s10_c0",
+            "qlora_s15_c0",
+            "lora_s41_c0"
+          ],
+          "paper_ids": [
+            "dora",
+            "dora",
+            "dora",
+            "qlora",
+            "lora"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "dora_s36_c0",
+            "lora_s51_c0",
+            "dora_s73_c1",
+            "dora_s2_c0",
+            "flashattention_v2_s55_c0"
+          ],
+          "paper_ids": [
+            "dora",
+            "lora",
+            "dora",
+            "dora",
+            "flashattention_v2"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "dora_s0_c0",
+            "dora_s2_c0",
+            "dora_s40_c0",
+            "lora_s38_c0",
+            "lora_s4_c1"
+          ],
+          "paper_ids": [
+            "dora",
+            "dora",
+            "dora",
+            "lora",
+            "lora"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "dora_s37_c4",
+            "qlora_s15_c0",
+            "lora_s13_c0",
+            "dora_s73_c1",
+            "dora_s0_c0"
+          ],
+          "paper_ids": [
+            "dora",
+            "qlora",
+            "lora",
+            "dora",
+            "dora"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 48.18,
+        "bm25": 5.01,
+        "hybrid": 49.21,
+        "hybrid_rerank": 1458.63
+      }
+    },
+    {
+      "id": "eval_30",
+      "query": "How does LLM.int8() handle emergent activation outliers in large Transformers?",
+      "target_papers": [
+        "quant_int8_llm"
+      ],
+      "gold_chunks": [
+        "quant_int8_llm_s0_c0",
+        "quant_int8_llm_s19_c0",
+        "quant_int8_llm_s20_c0"
+      ],
+      "query_type": "Trade-off",
+      "retriever_hits": {
+        "dense": {
+          "chunk_ids": [
+            "quant_int8_llm_s23_c2",
+            "quant_int8_llm_s0_c0",
+            "quant_int8_llm_s23_c4",
+            "quant_int8_llm_s25_c0",
+            "quant_int8_llm_s3_c0"
+          ],
+          "paper_ids": [
+            "quant_int8_llm",
+            "quant_int8_llm",
+            "quant_int8_llm",
+            "quant_int8_llm",
+            "quant_int8_llm"
+          ]
+        },
+        "bm25": {
+          "chunk_ids": [
+            "quant_int8_llm_s0_c0",
+            "quant_int8_llm_s23_c1",
+            "smoothquant_s22_c0",
+            "quant_int8_llm_s24_c0",
+            "smoothquant_s11_c0"
+          ],
+          "paper_ids": [
+            "quant_int8_llm",
+            "quant_int8_llm",
+            "smoothquant",
+            "quant_int8_llm",
+            "smoothquant"
+          ]
+        },
+        "hybrid": {
+          "chunk_ids": [
+            "quant_int8_llm_s0_c0",
+            "quant_int8_llm_s23_c1",
+            "quant_int8_llm_s25_c0",
+            "quant_int8_llm_s23_c4",
+            "quant_int8_llm_s24_c0"
+          ],
+          "paper_ids": [
+            "quant_int8_llm",
+            "quant_int8_llm",
+            "quant_int8_llm",
+            "quant_int8_llm",
+            "quant_int8_llm"
+          ]
+        },
+        "hybrid_rerank": {
+          "chunk_ids": [
+            "quant_int8_llm_s0_c0",
+            "quant_int8_llm_s25_c0",
+            "smoothquant_s22_c1",
+            "kv_cache_compression_h2o_s20_c0",
+            "smoothquant_s4_c0"
+          ],
+          "paper_ids": [
+            "quant_int8_llm",
+            "quant_int8_llm",
+            "smoothquant",
+            "kv_cache_compression_h2o",
+            "smoothquant"
+          ]
+        }
+      },
+      "latencies_ms": {
+        "dense": 53.26,
+        "bm25": 4.99,
+        "hybrid": 52.86,
+        "hybrid_rerank": 1496.72
+      }
+    }
+  ]
+}

@@ -1,0 +1,622 @@
+[
+  {
+    "id": "eval_01",
+    "query": "How does FlashAttention prevent the quadratic memory bottleneck of standard attention?",
+    "target_paper_ids": [
+      "flashattention_v1",
+      "flashattention_v2"
+    ],
+    "gold_chunk_ids": [
+      "flashattention_v1_s1_c0",
+      "flashattention_v1_s4_c0",
+      "flashattention_v1_s125_c0"
+    ],
+    "query_type": "Mechanistic",
+    "gold_keywords": [
+      "tiling",
+      "SRAM",
+      "HBM",
+      "IO-aware",
+      "softmax scaling"
+    ],
+    "reference_answer": "FlashAttention uses tiling to compute softmax in blocks loaded into fast SRAM without materializing the full N x N intermediate attention matrix in GPU HBM."
+  },
+  {
+    "id": "eval_02",
+    "query": "What architectural improvements are introduced in FlashAttention-2 compared to FlashAttention-1?",
+    "target_paper_ids": [
+      "flashattention_v2"
+    ],
+    "gold_chunk_ids": [
+      "flashattention_v2_s0_c0",
+      "flashattention_v2_s1_c0",
+      "flashattention_v2_s11_c0"
+    ],
+    "query_type": "Comparative",
+    "gold_keywords": [
+      "work partitioning",
+      "non-matmul FLOPs",
+      "sequence parallelism",
+      "warp"
+    ],
+    "reference_answer": "FlashAttention-2 reduces non-matmul FLOPs, improves work partitioning across thread blocks/warps, and adds sequence parallelism along the sequence length dimension."
+  },
+  {
+    "id": "eval_03",
+    "query": "How does LoRA reduce the number of trainable parameters during fine-tuning?",
+    "target_paper_ids": [
+      "lora"
+    ],
+    "gold_chunk_ids": [
+      "lora_s4_c0",
+      "lora_s11_c0",
+      "lora_s0_c0"
+    ],
+    "query_type": "Mechanistic",
+    "gold_keywords": [
+      "low-rank",
+      "decomposition matrices",
+      "rank r",
+      "frozen",
+      "delta W = B x A"
+    ],
+    "reference_answer": "LoRA freezes pre-trained model weights and injects trainable rank-decomposition matrices A and B (rank r << d) into Transformer self-attention projections."
+  },
+  {
+    "id": "eval_04",
+    "query": "What is NormalFloat4 (NF4) and Double Quantization in QLoRA?",
+    "target_paper_ids": [
+      "qlora"
+    ],
+    "gold_chunk_ids": [
+      "qlora_s0_c0",
+      "qlora_s15_c0",
+      "qlora_s11_c0"
+    ],
+    "query_type": "Terminology",
+    "gold_keywords": [
+      "NormalFloat",
+      "NF4",
+      "Double Quantization",
+      "Paged Optimizers",
+      "4-bit"
+    ],
+    "reference_answer": "NF4 is an information-theoretically optimal quantile data type for normally distributed weights, and Double Quantization quantizes quantization constants to save memory."
+  },
+  {
+    "id": "eval_05",
+    "query": "How does PagedAttention eliminate memory fragmentation in vLLM?",
+    "target_paper_ids": [
+      "vllm_pagedattention"
+    ],
+    "gold_chunk_ids": [
+      "vllm_pagedattention_s24_c2",
+      "vllm_pagedattention_s6_c0",
+      "vllm_pagedattention_s14_c0"
+    ],
+    "query_type": "Mechanistic",
+    "gold_keywords": [
+      "PagedAttention",
+      "virtual memory",
+      "blocks",
+      "internal fragmentation",
+      "KV cache"
+    ],
+    "reference_answer": "PagedAttention manages KV cache in non-contiguous physical memory blocks inspired by OS virtual memory paging, cutting waste from 60-80% down to near 0%."
+  },
+  {
+    "id": "eval_06",
+    "query": "How does GPTQ perform one-shot post-training quantization?",
+    "target_paper_ids": [
+      "gptq"
+    ],
+    "gold_chunk_ids": [
+      "gptq_s4_c0",
+      "gptq_s11_c0",
+      "gptq_s12_c0"
+    ],
+    "query_type": "Mechanistic",
+    "gold_keywords": [
+      "Hessian",
+      "second-order",
+      "Optimal Brain Surgeon",
+      "Cholesky",
+      "columns"
+    ],
+    "reference_answer": "GPTQ uses approximate second-order inverse Hessian information to update unquantized weights in blocks after quantizing each column."
+  },
+  {
+    "id": "eval_07",
+    "query": "Why does AWQ focus on protecting the top 1% salient weights based on activation magnitudes?",
+    "target_paper_ids": [
+      "awq"
+    ],
+    "gold_chunk_ids": [
+      "awq_s34_c0",
+      "awq_s10_c0",
+      "awq_s12_c0"
+    ],
+    "query_type": "Trade-off",
+    "gold_keywords": [
+      "salient",
+      "activation magnitudes",
+      "per-channel scaling",
+      "outliers",
+      "weight-only"
+    ],
+    "reference_answer": "AWQ observes that weight importance is governed by input activation magnitudes, protecting the top 1% salient channels with per-channel scaling to prevent perplexity blowup."
+  },
+  {
+    "id": "eval_08",
+    "query": "How does SmoothQuant enable INT8 quantization of both activations and weights?",
+    "target_paper_ids": [
+      "smoothquant"
+    ],
+    "gold_chunk_ids": [
+      "smoothquant_s19_c0",
+      "smoothquant_s22_c2",
+      "smoothquant_s0_c0"
+    ],
+    "query_type": "Mechanistic",
+    "gold_keywords": [
+      "migration",
+      "per-channel",
+      "scaling factor",
+      "W8A8",
+      "outlier"
+    ],
+    "reference_answer": "SmoothQuant mathematically transfers activation quantization difficulty to weights by multiplying activations by an inverse per-channel smoothing factor and scaling weights."
+  },
+  {
+    "id": "eval_09",
+    "query": "What is the core concept of Speculative Decoding for accelerating autoregressive generation?",
+    "target_paper_ids": [
+      "speculative_decoding"
+    ],
+    "gold_chunk_ids": [
+      "speculative_decoding_s7_c0",
+      "speculative_decoding_s12_c0",
+      "speculative_decoding_s63_c0"
+    ],
+    "query_type": "Conceptual",
+    "gold_keywords": [
+      "draft model",
+      "target model",
+      "parallel verification",
+      "rejection sampling",
+      "acceptance rate"
+    ],
+    "reference_answer": "A small fast draft model generates K speculative candidate tokens, which are verified in parallel in a single forward pass by the larger target LLM."
+  },
+  {
+    "id": "eval_10",
+    "query": "What triple loss function does DistilBERT use during knowledge distillation?",
+    "target_paper_ids": [
+      "distilbert"
+    ],
+    "gold_chunk_ids": [
+      "distilbert_s2_c0",
+      "distilbert_s6_c0",
+      "distilbert_s1_c0"
+    ],
+    "query_type": "Mechanistic",
+    "gold_keywords": [
+      "distillation loss",
+      "masked language modeling",
+      "cosine embedding",
+      "temperature"
+    ],
+    "reference_answer": "DistilBERT combines distillation loss (soft target probabilities with temperature), masked language modeling loss, and cosine embedding loss between hidden states."
+  },
+  {
+    "id": "eval_11",
+    "query": "How does DoRA decompose weight matrices differently from standard LoRA?",
+    "target_paper_ids": [
+      "dora"
+    ],
+    "gold_chunk_ids": [
+      "dora_s2_c0",
+      "dora_s17_c0",
+      "dora_s10_c0"
+    ],
+    "query_type": "Comparative",
+    "gold_keywords": [
+      "magnitude",
+      "direction",
+      "weight-decomposed",
+      "norm",
+      "LoRA"
+    ],
+    "reference_answer": "DoRA decomposes weight matrix into a magnitude vector and a directional matrix, keeping magnitude trainable while applying LoRA to directional updates."
+  },
+  {
+    "id": "eval_12",
+    "query": "How does Flash-Decoding optimize LLM generation for long contexts during inference?",
+    "target_paper_ids": [
+      "flashdecoding"
+    ],
+    "gold_chunk_ids": [
+      "flashdecoding_s2_c0",
+      "flashdecoding_s3_c1",
+      "flashdecoding_s8_c0"
+    ],
+    "query_type": "Mechanistic",
+    "gold_keywords": [
+      "split KV",
+      "parallel reduction",
+      "sequence length",
+      "inference latency"
+    ],
+    "reference_answer": "Flash-Decoding splits the KV cache across multiple GPU thread blocks and performs a parallel reduction step at the end to saturate compute during decode phase."
+  },
+  {
+    "id": "eval_13",
+    "query": "What is the role of attention sinks in StreamingLLM for infinite sequence streaming?",
+    "target_paper_ids": [
+      "streaming_llm"
+    ],
+    "gold_chunk_ids": [
+      "streaming_llm_s11_c0",
+      "streaming_llm_s11_c1",
+      "streaming_llm_s7_c0"
+    ],
+    "query_type": "Conceptual",
+    "gold_keywords": [
+      "attention sinks",
+      "initial tokens",
+      "rolling KV",
+      "Softmax off-by-one"
+    ],
+    "reference_answer": "StreamingLLM retains initial 4 tokens as attention sinks (where initial softmax mass naturally concentrates) plus a rolling recent window to maintain stable perplexity."
+  },
+  {
+    "id": "eval_14",
+    "query": "How does RadixAttention in SGLang enable automatic KV cache reuse across queries?",
+    "target_paper_ids": [
+      "sglang_radix"
+    ],
+    "gold_chunk_ids": [
+      "sglang_radix_s5_c2",
+      "sglang_radix_s6_c0",
+      "sglang_radix_s7_c0"
+    ],
+    "query_type": "Mechanistic",
+    "gold_keywords": [
+      "radix tree",
+      "LRU cache",
+      "prefix sharing",
+      "multi-turn",
+      "few-shot"
+    ],
+    "reference_answer": "RadixAttention organizes KV caches as a Radix tree with LRU eviction, enabling prefix reuse for few-shot examples, multi-turn dialogues, and reasoning trees."
+  },
+  {
+    "id": "eval_15",
+    "query": "How does Medusa accelerate generation using multiple decoding heads without a separate draft model?",
+    "target_paper_ids": [
+      "medusa"
+    ],
+    "gold_chunk_ids": [
+      "medusa_s43_c1",
+      "medusa_s43_c3",
+      "medusa_s8_c0"
+    ],
+    "query_type": "Mechanistic",
+    "gold_keywords": [
+      "heads",
+      "tree attention",
+      "speculative",
+      "multiple future tokens",
+      "top-k"
+    ],
+    "reference_answer": "Medusa trains multiple lightweight MLP heads atop the original LLM's last hidden state to predict future tokens and verifies them via tree attention."
+  },
+  {
+    "id": "eval_16",
+    "query": "What memory components are partitioned in ZeRO-1, ZeRO-2, and ZeRO-3 stages in DeepSpeed?",
+    "target_paper_ids": [
+      "deepspeed_zero"
+    ],
+    "gold_chunk_ids": [
+      "deepspeed_zero_s1_c1",
+      "deepspeed_zero_s1_c2",
+      "deepspeed_zero_s3_c1"
+    ],
+    "query_type": "Comparative",
+    "gold_keywords": [
+      "ZeRO-1",
+      "ZeRO-2",
+      "ZeRO-3",
+      "optimizer state",
+      "gradients",
+      "parameters"
+    ],
+    "reference_answer": "ZeRO-1 partitions optimizer states, ZeRO-2 partitions gradients + optimizer states, and ZeRO-3 partitions model parameters, gradients, and optimizer states."
+  },
+  {
+    "id": "eval_17",
+    "query": "What compute-optimal token-to-parameter ratio was established by Chinchilla?",
+    "target_paper_ids": [
+      "chinchilla_scaling"
+    ],
+    "gold_chunk_ids": [
+      "chinchilla_scaling_s2_c0",
+      "chinchilla_scaling_s3_c0",
+      "chinchilla_scaling_s23_c0"
+    ],
+    "query_type": "Numerical",
+    "gold_keywords": [
+      "compute-optimal",
+      "tokens",
+      "parameters",
+      "equal proportions",
+      "Kaplan"
+    ],
+    "reference_answer": "Chinchilla showed that for compute-optimal training, model parameter count and number of training tokens should scale in equal 1:1 proportion (approx 20 tokens per parameter)."
+  },
+  {
+    "id": "eval_18",
+    "query": "How does Grouped-Query Attention (GQA) reduce memory bandwidth compared to Multi-Head Attention?",
+    "target_paper_ids": [
+      "mqa_gqa"
+    ],
+    "gold_chunk_ids": [
+      "mqa_gqa_s0_c0",
+      "mqa_gqa_s6_c0",
+      "mqa_gqa_s7_c1"
+    ],
+    "query_type": "Trade-off",
+    "gold_keywords": [
+      "grouped-query",
+      "multi-query",
+      "multi-head",
+      "KV heads",
+      "memory bandwidth"
+    ],
+    "reference_answer": "GQA divides query heads into G groups sharing a single key-value head per group, achieving MQA-like inference speed with MHA-like quality."
+  },
+  {
+    "id": "eval_19",
+    "query": "What are the dual parallel and recurrent representation modes of RetNet?",
+    "target_paper_ids": [
+      "retnet"
+    ],
+    "gold_chunk_ids": [
+      "retnet_s6_c0",
+      "retnet_s46_c0",
+      "retnet_s0_c0"
+    ],
+    "query_type": "Conceptual",
+    "gold_keywords": [
+      "parallel",
+      "recurrent",
+      "chunkwise",
+      "multi-scale retention",
+      "O(1) inference"
+    ],
+    "reference_answer": "RetNet supports parallel training representation, O(1) recurrent step inference, and chunkwise recurrent computation for long sequences."
+  },
+  {
+    "id": "eval_20",
+    "query": "How does Mamba achieve linear-time sequence modeling with selective state spaces?",
+    "target_paper_ids": [
+      "mamba"
+    ],
+    "gold_chunk_ids": [
+      "mamba_s9_c2",
+      "mamba_s9_c4",
+      "mamba_s9_c5"
+    ],
+    "query_type": "Mechanistic",
+    "gold_keywords": [
+      "selective SSM",
+      "hardware-aware parallel scan",
+      "time-varying",
+      "SRAM",
+      "linear time"
+    ],
+    "reference_answer": "Mamba makes SSM parameters input-dependent and computes the recurrence via a hardware-aware parallel scan in GPU SRAM."
+  },
+  {
+    "id": "eval_21",
+    "query": "What architectural modifications were adopted in LLaMA compared to the original Transformer?",
+    "target_paper_ids": [
+      "llama_paper"
+    ],
+    "gold_chunk_ids": [
+      "llama_paper_s11_c0",
+      "llama_paper_s0_c0",
+      "llama_paper_s24_c8"
+    ],
+    "query_type": "Mechanistic",
+    "gold_keywords": [
+      "RMSNorm",
+      "SwiGLU",
+      "RoPE",
+      "pre-normalization",
+      "rotary embeddings"
+    ],
+    "reference_answer": "LLaMA adopts pre-normalization with RMSNorm, SwiGLU activation functions, and Rotary Position Embeddings (RoPE)."
+  },
+  {
+    "id": "eval_22",
+    "query": "What context length expansion and attention mechanism were introduced in Llama 2?",
+    "target_paper_ids": [
+      "llama2_paper"
+    ],
+    "gold_chunk_ids": [
+      "llama2_paper_s9_c1",
+      "llama2_paper_s3_c0",
+      "llama2_paper_s9_c0"
+    ],
+    "query_type": "Numerical",
+    "gold_keywords": [
+      "GQA",
+      "4096 context",
+      "RLHF",
+      "Rejection Sampling",
+      "PPO"
+    ],
+    "reference_answer": "Llama 2 expanded context length to 4096 tokens, introduced GQA for 34B/70B models, trained on 2T tokens, and incorporated iterative RLHF."
+  },
+  {
+    "id": "eval_23",
+    "query": "How does KIVI achieve 2-bit quantization for key-value caches?",
+    "target_paper_ids": [
+      "kv_quant_kivi"
+    ],
+    "gold_chunk_ids": [
+      "kv_quant_kivi_s4_c0",
+      "kv_quant_kivi_s3_c0",
+      "kv_quant_kivi_s9_c0"
+    ],
+    "query_type": "Terminology",
+    "gold_keywords": [
+      "2-bit",
+      "asymmetric",
+      "per-channel key",
+      "per-token value",
+      "KV cache"
+    ],
+    "reference_answer": "KIVI applies per-channel quantization to key cache and per-token quantization to value cache, compressing KV cache to 2 bits without fine-tuning."
+  },
+  {
+    "id": "eval_24",
+    "query": "How does Longformer combine local windowed and global attention for document processing?",
+    "target_paper_ids": [
+      "sparse_attention_longformer"
+    ],
+    "gold_chunk_ids": [
+      "sparse_attention_longformer_s0_c0",
+      "sparse_attention_longformer_s6_c0",
+      "sparse_attention_longformer_s7_c0"
+    ],
+    "query_type": "Conceptual",
+    "gold_keywords": [
+      "sliding window",
+      "dilated sliding window",
+      "global attention",
+      "linear scaling"
+    ],
+    "reference_answer": "Longformer uses sliding window local attention to build contextual representations with linear O(N) complexity, augmented by global attention on select tokens."
+  },
+  {
+    "id": "eval_25",
+    "query": "What hardware features does FlashAttention-3 leverage on Nvidia Hopper GPUs?",
+    "target_paper_ids": [
+      "flash_attention_3"
+    ],
+    "gold_chunk_ids": [
+      "flash_attention_3_s0_c0",
+      "flash_attention_3_s2_c0",
+      "flash_attention_3_s5_c1"
+    ],
+    "query_type": "Mechanistic",
+    "gold_keywords": [
+      "Hopper",
+      "TMA",
+      "warpgroup GEMM",
+      "FP8",
+      "asynchrony"
+    ],
+    "reference_answer": "FlashAttention-3 leverages Hopper Tensor Memory Accelerator (TMA), warpgroup GEMMs (WGMMA), and FP8 low-precision accumulation with ping-pong buffering."
+  },
+  {
+    "id": "eval_26",
+    "query": "How does SpQR isolate outlier weights in low-bit LLM weight compression?",
+    "target_paper_ids": [
+      "spqr_quantization"
+    ],
+    "gold_chunk_ids": [
+      "spqr_quantization_s34_c2",
+      "spqr_quantization_s36_c1",
+      "spqr_quantization_s38_c0"
+    ],
+    "query_type": "Trade-off",
+    "gold_keywords": [
+      "sparse outlier",
+      "3-bit",
+      "bilevel grouping",
+      "near-lossless"
+    ],
+    "reference_answer": "SpQR isolates sensitive outlier weights in a sparse 16-bit matrix while compressing remaining weights to 3-bit with bilevel grouping."
+  },
+  {
+    "id": "eval_27",
+    "query": "What eviction policy does H2O (Heavy-Hitter Oracle) use to compress KV caches?",
+    "target_paper_ids": [
+      "kv_cache_compression_h2o"
+    ],
+    "gold_chunk_ids": [
+      "kv_cache_compression_h2o_s3_c0",
+      "kv_cache_compression_h2o_s9_c1",
+      "kv_cache_compression_h2o_s3_c1"
+    ],
+    "query_type": "Mechanistic",
+    "gold_keywords": [
+      "Heavy-Hitter",
+      "accumulated attention score",
+      "dynamic eviction",
+      "greedy"
+    ],
+    "reference_answer": "H2O tracks accumulated attention scores for each token and greedily evicts tokens with lowest cumulative scores while preserving heavy hitters and recent tokens."
+  },
+  {
+    "id": "eval_28",
+    "query": "How does EAGLE differ from traditional token-level speculative sampling?",
+    "target_paper_ids": [
+      "speculative_eagle"
+    ],
+    "gold_chunk_ids": [
+      "speculative_eagle_s2_c0",
+      "speculative_eagle_s2_c1",
+      "speculative_eagle_s32_c0"
+    ],
+    "query_type": "Comparative",
+    "gold_keywords": [
+      "feature level",
+      "hidden states",
+      "speculative sampling",
+      "rethinking uncertainty"
+    ],
+    "reference_answer": "EAGLE speculates on top-layer feature vectors (hidden states) instead of discrete tokens, bypassing token randomness uncertainty before classification."
+  },
+  {
+    "id": "eval_29",
+    "query": "How does Unsloth optimize LoRA fine-tuning performance in Triton?",
+    "target_paper_ids": [
+      "unsloth_lora"
+    ],
+    "gold_chunk_ids": [
+      "unsloth_lora_s12_c0"
+    ],
+    "query_type": "Mechanistic",
+    "gold_keywords": [
+      "manual backprop",
+      "Triton kernels",
+      "cross-entropy",
+      "memory footprint"
+    ],
+    "reference_answer": "Unsloth derives manual analytical backpropagation gradients in custom OpenAI Triton kernels, avoiding PyTorch autograd intermediate memory allocations."
+  },
+  {
+    "id": "eval_30",
+    "query": "How does LLM.int8() handle emergent activation outliers in large Transformers?",
+    "target_paper_ids": [
+      "quant_int8_llm"
+    ],
+    "gold_chunk_ids": [
+      "quant_int8_llm_s0_c0",
+      "quant_int8_llm_s19_c0",
+      "quant_int8_llm_s20_c0"
+    ],
+    "query_type": "Trade-off",
+    "gold_keywords": [
+      "emergent outliers",
+      "vector-wise",
+      "mixed-precision decomposition",
+      "threshold 6.0"
+    ],
+    "reference_answer": "LLM.int8() extracts columns with activation magnitudes exceeding threshold 6.0 into 16-bit float matrix multiplications while running the remaining 99.9% in 8-bit."
+  }
+]
