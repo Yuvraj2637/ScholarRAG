@@ -16,98 +16,67 @@ st.set_page_config(page_title="ScholarRAG", layout="wide")
 st.html("""
 <style>
 [data-testid="stAppViewContainer"] {
-    --paper: #f8f7f4;
-    --ink: #212238;
-    --muted: #5b5b72;
-    --line: #e0dce8;
-    --accent: #5035a4;
+    --paper: #faf9f6;
+    --ink: #202723;
+    --muted: #516059;
+    --line: #dce1db;
+    --accent: #1c5b43;
     color: var(--ink);
     background: var(--paper);
     color-scheme: light;
 }
 [data-testid="stHeader"] { background: transparent; }
 [data-testid="stMainBlockContainer"] {
-    max-width: 1120px;
+    max-width: 1080px;
     padding: 3rem 2.25rem 4rem;
 }
-.scholar-brand, .scholar-meta {
+.scholar-brand {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: .65rem;
+    gap: 1rem;
+    padding-bottom: .8rem;
+    border-bottom: 1px solid var(--line);
 }
-.scholar-brand { justify-content: space-between; margin: 0 0 1.05rem; }
-.scholar-wordmark {
-    display: inline-flex;
-    align-items: center;
-    gap: .65rem;
-    color: #242037;
-    font-weight: 760;
-    letter-spacing: -.025em;
+.scholar-wordmark { font-weight: 730; letter-spacing: -.02em; }
+.scholar-wordmark::before {
+    content: "";
+    display: inline-block;
+    width: .55rem;
+    height: .55rem;
+    margin-right: .5rem;
+    background: var(--accent);
+    vertical-align: .11em;
 }
-.scholar-mark {
-    display: grid;
-    align-content: center;
-    gap: 3px;
-    width: 33px;
-    height: 33px;
-    padding: 7px;
-    border-radius: 9px;
-    background: #eae3fa;
-}
-.scholar-mark i { height: 2px; background: #5035a4; border-radius: 2px; }
-.scholar-mark i:last-child { width: 65%; }
 .scholar-brand a {
-    color: #5035a4;
-    font-size: .87rem;
+    color: var(--accent);
+    font-size: .88rem;
     font-weight: 650;
     text-decoration: none;
 }
 .scholar-brand a:hover { text-decoration: underline; }
-.scholar-hero {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-    border-radius: 19px;
-    background: linear-gradient(105deg, #242040 8%, #34305b 64%, #4b3973);
-    padding: clamp(1.4rem, 3.3vw, 2.65rem);
+.scholar-intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 15rem);
+    align-items: end;
+    gap: .75rem 2rem;
+    padding: .8rem 0 .35rem;
 }
-.scholar-hero::after {
-    position: absolute;
-    z-index: -1;
-    inset: 0 0 0 auto;
-    width: 45%;
-    content: "";
-    background:
-        radial-gradient(ellipse at 84% 105%, #aa8cec65 0%, transparent 64%),
-        radial-gradient(circle, #dfd1ff50 1px, transparent 1.4px) 0 0 / 16px 16px;
-    mask-image: linear-gradient(90deg, transparent, #000 90%);
-    pointer-events: none;
-}
-[data-testid="stAppViewContainer"] .scholar-hero h1 {
-    color: #fff;
+[data-testid="stAppViewContainer"] .scholar-intro h1 {
+    color: var(--ink);
     font-family: Georgia, serif;
-    font-size: clamp(2.25rem, 5vw, 3.65rem);
+    font-size: clamp(2rem, 5vw, 3.3rem);
     font-weight: 400;
-    letter-spacing: -.05em;
-    line-height: 1.04;
+    letter-spacing: -.045em;
+    line-height: 1.1;
     padding: 0;
-    margin: 0 0 .65rem;
+    margin: 0 0 .6rem;
 }
-.scholar-hero p {
-    max-width: 36rem;
-    color: #f3ebff;
-    font-size: clamp(.94rem, 1.5vw, 1.1rem);
-    margin: 0;
-}
-.scholar-meta { flex-wrap: wrap; margin-top: 1.15rem; }
-.scholar-meta span {
-    display: inline-block;
-    padding: .27rem .65rem;
-    border: 1px solid #cbbaf34a;
-    border-radius: 999px;
-    background: #e4d7ff15;
-    color: #f4efff;
-    font-size: .8rem;
+.scholar-intro p { color: var(--muted); margin: 0; }
+.scholar-scope {
+    padding: .15rem 0 .15rem .85rem;
+    border-left: 2px solid #bfd0c4;
+    font-size: .85rem;
 }
 [data-testid="stAppViewContainer"] [data-testid="stMarkdownContainer"] :is(p, h2, h3, h4),
 [data-testid="stAppViewContainer"] [data-testid="stHeading"] :is(h2, h3),
@@ -125,30 +94,30 @@ st.html("""
 [data-testid="stTabs"] [role="tablist"]::after { background-color: var(--line); }
 [data-testid="stTabs"] [role="tab"] { color: var(--muted); }
 [data-testid="stTabs"] [role="tab"] p { color: inherit !important; font-weight: 650; }
-[data-testid="stTabs"] [role="tab"][aria-selected="true"] { color: var(--accent); }
+[data-testid="stTabs"] [role="tab"][aria-selected="true"] { color: var(--accent); border-bottom-color: var(--accent); }
 [data-testid="stTabs"] [data-baseweb="tab-highlight"] { background-color: var(--accent); }
 [data-testid="stTabs"] [data-baseweb="tab-border"] { background-color: transparent; }
 [data-testid="stTabs"] [role="tabpanel"] { padding-top: .45rem; }
-[data-testid="stForm"],
-[class*="st-key-evidence-"], [class*="st-key-compare-"] {
+[data-testid="stForm"], [class*="st-key-compare-"] {
     background: #fff;
     border-color: var(--line) !important;
-    border-radius: 13px !important;
+    border-radius: 8px !important;
 }
-.st-key-examples {
-    background: #f0ebfa;
-    border: 1px solid #e0d7f3;
-    border-radius: 13px;
-    padding: .8rem 1rem;
+.st-key-examples [data-testid="stHorizontalBlock"] { gap: .55rem; }
+.st-key-answer { border-top: 1px solid var(--line); padding-top: .65rem; }
+[class*="st-key-evidence-"] { padding-bottom: .25rem; border-bottom: 1px solid var(--line); }
+.st-key-sources {
+    background: #eef2ed;
+    border-left: 2px solid #c6d5ca;
+    padding: .65rem .85rem;
 }
-.st-key-examples [data-testid="stVerticalBlock"] { gap: .5rem; }
 [data-testid="stTextInput"] [data-baseweb="input"],
 [data-testid="stTextInputRootElement"],
 [data-testid="stSelectbox"] [role="group"],
 [data-testid="stSelectbox"] [data-baseweb="select"] > div {
     color: var(--ink);
     background: #fff;
-    border-color: #d9d2e8;
+    border-color: #c8d3cc;
     border-radius: 8px;
 }
 [data-testid="stTextInput"] input, [data-testid="stSelectbox"] input {
@@ -156,40 +125,39 @@ st.html("""
     background: transparent;
     caret-color: var(--accent);
 }
-[data-testid="stTextInput"] input::placeholder { color: #66647b; opacity: 1; }
+[data-testid="stTextInput"] input::placeholder { color: #516059; opacity: 1; }
 [data-testid="stSelectboxVirtualDropdown"] {
-    color: #212238;
+    color: #202723;
     background: #fff;
-    border: 1px solid #e0dce8;
+    border: 1px solid #dce1db;
 }
-[data-testid="stSelectboxVirtualDropdown"] [role="option"] { color: #212238; }
+[data-testid="stSelectboxVirtualDropdown"] [role="option"] { color: #202723; }
 [data-testid="stSelectboxVirtualDropdown"] [role="option"]:is([data-focused], [aria-selected="true"]) {
-    background: #f0ebfa;
+    background: #e8f0ea;
 }
 [data-testid="stAppViewContainer"] button:is([kind="primary"], [kind="primaryFormSubmit"]) {
     color: #fff;
-    background: #5035a4;
-    border: 1px solid #5035a4;
+    background: #1c5b43;
+    border: 1px solid #1c5b43;
     border-radius: 8px;
 }
 [data-testid="stAppViewContainer"] button:is([kind="primary"], [kind="primaryFormSubmit"]) p { color: #fff !important; }
-[data-testid="stAppViewContainer"] button:is([kind="primary"], [kind="primaryFormSubmit"]):hover { background: #3f268b; }
+[data-testid="stAppViewContainer"] button:is([kind="primary"], [kind="primaryFormSubmit"]):hover { background: #144633; }
 .st-key-examples button {
-    justify-content: flex-start;
-    background: #fff;
-    border: 1px solid #dfd6ef;
+    background: transparent;
+    border: 1px solid #cdd8d0;
     border-radius: 8px;
     text-align: left;
     color: var(--accent);
 }
-.st-key-examples button:hover { background: #faf7ff; border-color: var(--accent); }
+.st-key-examples button:hover { background: #eaf0eb; border-color: var(--accent); }
 [data-testid="stAppViewContainer"] :is(a, button, input):focus-visible {
-    outline: 2px solid #7555ca;
+    outline: 2px solid #2a7b59;
     outline-offset: 2px;
 }
 .scholar-result-kicker {
     margin: 0;
-    color: #5035a4;
+    color: #1c5b43;
     font-size: .78rem;
     font-weight: 730;
     line-height: 1.25;
@@ -202,14 +170,14 @@ st.html("""
 [data-testid="stExpander"] details {
     background: #fff;
     border-color: var(--line);
-    border-radius: 10px;
+    border-radius: 7px;
 }
 [data-testid="stTable"] :is(th, td) { color: var(--ink); border-color: var(--line); }
-[data-testid="stTable"] th { background: #eee8f7; }
-[data-testid="stTable"] tr:nth-child(even) { background: #f1edf6; }
+[data-testid="stTable"] th { background: #e8efe9; }
+[data-testid="stTable"] tr:nth-child(even) { background: #f1f3ef; }
 @media (max-width: 640px) {
     [data-testid="stMainBlockContainer"] { padding: 2.8rem 1rem 2rem; }
-    .scholar-hero { border-radius: 13px; }
+    .scholar-intro { grid-template-columns: minmax(0, 1fr); }
     [data-testid="stTabs"] [role="tablist"] { gap: .85rem; }
     [data-testid="stTabs"] [data-testid="stHorizontalBlock"] { flex-direction: column; }
     [data-testid="stTabs"] [data-testid="stHorizontalBlock"] > [data-testid="stColumn"] {
@@ -245,44 +213,54 @@ if "question" not in st.session_state:
     select_example(DEFAULT_QUESTION)
 
 st.html(f"""
-<div class="scholar-brand">
-  <span class="scholar-wordmark"><span class="scholar-mark" aria-hidden="true"><i></i><i></i><i></i></span>ScholarRAG</span>
-  <a href="https://github.com/Yuvraj2637/ScholarRAG" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-</div>
-<section class="scholar-hero" aria-labelledby="scholar-heading">
-  <h1 id="scholar-heading">Search research papers</h1>
-  <p>Ask about efficient language models, compare methods, and open the exact pages behind each answer.</p>
-  <div class="scholar-meta"><span>{len(PAPERS)} papers in this demo</span></div>
+<header class="scholar-brand">
+  <span class="scholar-wordmark">ScholarRAG</span>
+  <a href="https://github.com/Yuvraj2637/ScholarRAG" target="_blank" rel="noopener noreferrer">Source on GitHub ↗</a>
+</header>
+<section class="scholar-intro" aria-labelledby="scholar-heading">
+  <div>
+    <h1 id="scholar-heading">Search research papers</h1>
+    <p>Ask a question about efficient language models and follow the answer to the source.</p>
+  </div>
+  <p class="scholar-scope">This demo searches notes from {len(PAPERS)} papers, with links to the original PDF pages.</p>
 </section>
 """)
 
 ask, compare, library, benchmark = st.tabs(("Ask a question", "Compare papers", "Paper library", "Benchmark"))
 
 with ask:
-    work, examples = st.columns([2, 1], gap="medium")
-    with work:
-        with st.form("ask"):
-            st.text_input("Research question", key="question", max_chars=350,
-                          placeholder="How does FlashAttention reduce GPU memory traffic?")
-            st.form_submit_button("Find evidence", type="primary", on_click=answer_question)
-    with examples:
-        with st.container(key="examples"):
-            st.markdown("**Try an example**")
-            for label, example in EXAMPLES.items():
-                st.button(label, on_click=select_example, args=(example,), width="stretch")
+    with st.form("ask"):
+        field, action = st.columns([5, 1], vertical_alignment="bottom")
+        field.text_input("Research question", key="question", max_chars=350,
+                         placeholder="How does FlashAttention reduce GPU memory traffic?")
+        action.form_submit_button("Find evidence", type="primary", on_click=answer_question, width="stretch")
+
+    with st.container(key="examples"):
+        st.caption("Example questions")
+        example_columns = st.columns(len(EXAMPLES))
+        for column, (label, example) in zip(example_columns, EXAMPLES.items()):
+            column.button(label, on_click=select_example, args=(example,), width="stretch")
+
     question, evidence = st.session_state.result
     if not question:
         st.info("Enter a question or choose one of the examples.")
     elif not evidence:
         st.info("No matching evidence in the starter corpus. Try a paper name or a specific method.")
     else:
-        st.subheader("Evidence-backed answer")
-        st.caption(question)
-        for index, (paper_id, note) in enumerate(evidence):
-            with st.container(border=True, key=f"evidence-{index}"):
-                st.html(f'<p class="scholar-result-kicker">{note.facet}</p>')
-                st.markdown(note.text)
-                st.markdown(citation(paper_id, note))
+        with st.container(key="answer"):
+            st.subheader("Evidence-backed answer")
+            st.caption(question)
+            response, sources = st.columns([2, 1], gap="large")
+            with response:
+                for index, (_, note) in enumerate(evidence, 1):
+                    with st.container(key=f"evidence-{index}"):
+                        st.html(f'<p class="scholar-result-kicker">{note.facet} [{index}]</p>')
+                        st.markdown(note.text)
+            with sources:
+                with st.container(key="sources"):
+                    st.markdown("**Source pages**")
+                    for index, (paper_id, note) in enumerate(evidence, 1):
+                        st.markdown(f"{index}. {citation(paper_id, note)}")
 
 with compare:
     st.subheader("Compare methods and findings")
